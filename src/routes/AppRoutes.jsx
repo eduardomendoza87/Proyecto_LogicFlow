@@ -12,7 +12,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<AlumnosLayout />}>
         <Route index element={<Home />} />
-        <Route path="acercade" element={<AcercadeNosotros />} />
+        <Route path="acerca-de-nosotros" element={<AcercadeNosotros />} />
         <Route path="iniciar-sesion" element={<IniciarSesion />} />
         <Route path="registrarse" element={<Registrarse />} />
       </Route>

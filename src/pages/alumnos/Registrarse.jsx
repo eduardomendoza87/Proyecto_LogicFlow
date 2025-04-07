@@ -16,10 +16,10 @@ function Registrarse() {
         {/* Formulario de registro */}
         <div className="md:w-1/2 p-8">
           <h2 className="text-3xl font-semibold mb-6 text-center">
-            Registrarse en EduSpark
+            Registrarse en UCLA
           </h2>
           <h5 className="text-xl font-semibold mb-6 text-center">
-            Accede a contenido educativo, juegos y videollamadas en un solo lugar
+            Completa el siguiente formulario para crear tu cuenta
           </h5>
 
           <form className="space-y-6">

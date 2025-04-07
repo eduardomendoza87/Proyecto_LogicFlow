@@ -20,7 +20,7 @@ function Inicio() {
           tituloInView ? "opacity-100" : "opacity-0"
         }`}
       >
-        Bienvenido a EduSpark
+         Bienvenido a la plataforma virtual de la UCLA
       </h1>
 
       {/* Sección introductoria con imagen y texto */}
@@ -33,20 +33,15 @@ function Inicio() {
           }`}
         >
           <h2 className="text-3xl font-semibold mb-6 text-negroPersonalizado">
-            Descubre una nueva forma de aprender
+            Consultar cursos
           </h2>
           <p className="text-lg text-gray-700">
-            Clases interactivas, juegos educativos y videollamadas para niños en edad escolar.
+            Accede mediante acceso directo a los cursos de la UCLA. Explora una variedad de temas y recursos diseñados para enriquecer tu aprendizaje.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Link to="/registrarse">
+            <Link to="/cursosdetalle">
               <button className="bg-verdePersonalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
-                Empieza ahora
-              </button>
-            </Link>
-            <Link to="/clases">
-              <button className="bg-moradoPersonalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
-                Ver clases gratuitas
+                Ir a mis cursos
               </button>
             </Link>
           </div>
@@ -63,7 +58,7 @@ function Inicio() {
       </div>
 
       {/* Sección de cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
         {/* Card 2 */}
         <div
           ref={card2Ref}
@@ -75,9 +70,9 @@ function Inicio() {
             <FaBookOpen />
           </div>
           <p className="text-gray-700 mb-4">
-            Aprende con videos educativos diseñados para niños. Acceso sin interrupciones.
-          </p>
-          <Link to="/clases">
+            Accede a tus evaluaciones y tareas. Consulta tus notas y progreso.
+          </p>  
+          <Link to="/evaluaciones">
             <button className="bg-moradoPersonalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
               Ver más
             </button>
@@ -95,9 +90,9 @@ function Inicio() {
             <FaGamepad />
           </div>
           <p className="text-gray-700 mb-4">
-            Explora actividades divertidas para reforzar conocimientos.
+            Actualizar datos personales. Cambia tu contraseña y actualiza tu información.
           </p>
-          <Link to="/juegos">
+          <Link to="/perfil">
             <button className="bg-verdePersonalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
               Ver más
             </button>
@@ -115,9 +110,9 @@ function Inicio() {
             <FaCalendarAlt />
           </div>
           <p className="text-gray-700 mb-4">
-            Conéctate en tutorías grupales. Interactúa con otros estudiantes.
+            Explorar nuevos cursos y recursos. Consulta el calendario académico y eventos importantes.
           </p>
-          <Link to="/videollamadas">
+          <Link to="/explorarcursos">
             <button className="bg-moradoPersonalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
               Ver más
             </button>

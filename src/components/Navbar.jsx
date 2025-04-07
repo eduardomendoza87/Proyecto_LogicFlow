@@ -16,10 +16,10 @@ function Navbar() {
         <ul className="flex space-x-4">
           <li><Link to="/" className="text-gray-600 hover:text-black">Inicio</Link></li>
           <li><Link to="/acerca-de-nosotros" className="text-gray-600 hover:text-black">Acerca de nosotros</Link></li>
-          <li><Link to="/clases" className="text-gray-600 hover:text-black">Clases</Link></li>
-          <li><Link to="/juegos" className="text-gray-600 hover:text-black">Cursoss</Link></li>
-          <li><Link to="/videollamadas" className="text-gray-600 hover:text-black">Evaluaciones</Link></li>
-          <li><Link to="/progreso" className="text-gray-600 hover:text-black">Perfil</Link></li>
+          <li><Link to="/clasedetalle" className="text-gray-600 hover:text-black">Clases detalle</Link></li>
+          <li><Link to="/explorarclase" className="text-gray-600 hover:text-black">Explorar Cursoss</Link></li>
+          <li><Link to="/evaluaciones" className="text-gray-600 hover:text-black">Evaluaciones</Link></li>
+          <li><Link to="/perfil" className="text-gray-600 hover:text-black">Perfil</Link></li>
 
           {/* Botones de acción */}
           <li className="ml-4">
