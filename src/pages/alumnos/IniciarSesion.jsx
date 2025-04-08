@@ -5,7 +5,7 @@ function IniciarSesion() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
       {/* Contenedor principal */}
-      <div className="flex flex-col md:flex-row w-full max-w-4xl rounded-lg shadow-lg overflow-hidden bg-white">
+      <div className="bg-cafe4Personalizado flex flex-col md:flex-row w-full max-w-4xl rounded-lg shadow-lg overflow-hidden bg-white">
         
         {/* Imagen a la izquierda */}
         <div className="md:w-1/2">
@@ -48,7 +48,7 @@ function IniciarSesion() {
             {/* Botón de Iniciar Sesión */}
             <div className="flex items-center justify-between">
               <button 
-                className="bg-verdePersonalizado text-negroPersonalizado font-bold py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-opacity-80 active:scale-95"
+                className="bg-cafe3Personalizado text-negroPersonalizado font-bold py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-opacity-80 active:scale-95"
                 type="submit"
               >
                 Iniciar Sesión

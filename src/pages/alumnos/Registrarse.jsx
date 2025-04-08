@@ -6,7 +6,7 @@ function Registrarse() {
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
       
       {/* Contenedor principal */}
-      <div className="flex flex-col md:flex-row w-full max-w-4xl rounded-lg shadow-lg overflow-hidden bg-blancoPersonalizado">
+      <div className="bg-cafe4Personalizado flex flex-col md:flex-row w-full max-w-4xl rounded-lg shadow-lg overflow-hidden bg-blancoPersonalizado">
         
         {/* Imagen a la izquierda */}
         <div className="md:w-1/2">
@@ -98,7 +98,7 @@ function Registrarse() {
             <div className="flex items-center justify-center mt-2">
              <a 
                 href="/iniciar-sesion"
-                className="bg-verdePersonalizado text-negroPersonalizado font-bold py-2 px-6 rounded-lg transition duration-300 ease-in-out hover:bg-opacity-80 active:scale-95 shadow-md"
+                className="bg-cafe3Personalizado text-negroPersonalizado font-bold py-2 px-6 rounded-lg transition duration-300 ease-in-out hover:bg-opacity-80 active:scale-95 shadow-md"
                >
                 Iniciar Sesión
                 </a>

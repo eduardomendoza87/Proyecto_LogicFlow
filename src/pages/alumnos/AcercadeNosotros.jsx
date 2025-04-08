@@ -13,7 +13,7 @@ function AcercadeNosotros() {
   const [acerca4ref, acerca4InView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="bg-cafe4Personalizado container mx-auto p-6">
       {/* Título principal */}
       <h1
         ref={acercaTref}
@@ -31,7 +31,7 @@ function AcercadeNosotros() {
         <section className="flex flex-col md:flex-row items-center gap-12">
           <div
             ref={acerca1ref}
-            className={`bg-blancoPersonalizado p-6 text-center md:w-1/2 transition-opacity duration-1000 ${
+            className={`bg-blancoPersonalizado p-6 text-center rounded-xl shadow-lg md:w-1/2 transition-opacity duration-1000 ${
               acerca1InView ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -50,7 +50,7 @@ function AcercadeNosotros() {
         <section className="flex flex-col md:flex-row-reverse items-center gap-12">
           <div
             ref={acerca2ref}
-            className={`bg-blancoPersonalizado p-6 text-center md:w-1/2 transition-opacity duration-1000 ${
+            className={`bg-blancoPersonalizado p-6 text-center md:w-1/2 rounded-xl shadow-lg transition-opacity duration-1000 ${
               acerca2InView ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -72,7 +72,7 @@ function AcercadeNosotros() {
           </div>
           <div
             ref={acerca4ref}
-            className={`bg-blancoPersonalizado p-8 rounded-lg text-center md:w-1/2 shadow-md transition-opacity duration-1000 ${
+            className={`bg-blancoPersonalizado p-8 rounded-xl shadow-lg text-center md:w-1/2 shadow-md transition-opacity duration-1000 ${
               acerca4InView ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -94,7 +94,7 @@ function AcercadeNosotros() {
           </div>
           <div
             ref={acerca3ref}
-            className={`bg-blancoPersonalizado p-8 rounded-lg text-center md:w-1/2 shadow-md transition-opacity duration-1000 ${
+            className={`bg-blancoPersonalizado p-8 rounded-xl shadow-lg text-center md:w-1/2 shadow-md transition-opacity duration-1000 ${
               acerca3InView ? "opacity-100" : "opacity-0"
             }`}
           >

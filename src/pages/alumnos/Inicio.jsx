@@ -12,7 +12,7 @@ function Inicio() {
   const [card4Ref, card4InView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className=" bg-cafe4Personalizado mx-full h-full px-6 py-12">
       {/* Título principal */}
       <h1
         ref={tituloref}
@@ -38,9 +38,9 @@ function Inicio() {
           <p className="text-lg text-gray-700">
             Accede mediante acceso directo a los cursos de la UCLA. Explora una variedad de temas y recursos diseñados para enriquecer tu aprendizaje.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
             <Link to="/cursosdetalle">
-              <button className="bg-verdePersonalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
+              <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
                 Ir a mis cursos
               </button>
             </Link>
@@ -73,7 +73,7 @@ function Inicio() {
             Accede a tus evaluaciones y tareas. Consulta tus notas y progreso.
           </p>  
           <Link to="/evaluaciones">
-            <button className="bg-moradoPersonalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
+            <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
               Ver más
             </button>
           </Link>
@@ -93,7 +93,7 @@ function Inicio() {
             Actualizar datos personales. Cambia tu contraseña y actualiza tu información.
           </p>
           <Link to="/perfil">
-            <button className="bg-verdePersonalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
+            <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
               Ver más
             </button>
           </Link>
@@ -113,7 +113,7 @@ function Inicio() {
             Explorar nuevos cursos y recursos. Consulta el calendario académico y eventos importantes.
           </p>
           <Link to="/explorarcursos">
-            <button className="bg-moradoPersonalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
+            <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
               Ver más
             </button>
           </Link>
