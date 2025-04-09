@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo_EduSpark2 from "../assets/img/Logo_EduSpark2.png" // Asegúrate de que la ruta sea correcta
+import Logo_Ucla from "../assets/img/logo_ucla.webp"
 
 function Navbar() {
   return (
@@ -9,7 +9,7 @@ function Navbar() {
         
         {/* Logo con Link para evitar recarga */}
         <Link to="/" className="text-black font-bold text-xl flex items-center">
-          <img src={Logo_EduSpark2} className="h-20 mr-2" alt="EduSpark Logo" />
+          <img src={Logo_Ucla} className="h-20 mr-2" alt="EduSpark Logo" />
         </Link>
 
         {/* Menú de navegación */}

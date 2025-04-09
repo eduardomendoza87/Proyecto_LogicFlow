@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaBookOpen, FaGamepad, FaCalendarAlt } from "react-icons/fa";
-import educacion_digital from "../../assets/img/educacion_digital.webp";
+import inicio from "../../assets/img/inicio1_ucla.webp";
 import { useInView } from "react-intersection-observer";
 
 function Inicio() {
@@ -12,7 +12,7 @@ function Inicio() {
   const [card4Ref, card4InView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div className=" bg-cafe4Personalizado mx-full h-full px-6 py-12">
+    <div className=" bg-cafe4Personalizado container mx-auto p-8 bg-gray-100 min-h-screen">
       {/* Título principal */}
       <h1
         ref={tituloref}
@@ -50,7 +50,7 @@ function Inicio() {
         {/* Imagen */}
         <div className="flex-1">
           <img
-            src={educacion_digital}
+            src={inicio}
             alt="Niños aprendiendo en línea"
             className="w-full max-w-md mx-auto rounded-xl shadow-lg object-cover"
           />

@@ -5,6 +5,7 @@ import AlumnosLayout from "../layouts/AlumnosLayout";
 import AcercadeNosotros from "../pages/alumnos/AcercadeNosotros";
 import IniciarSesion from "../pages/alumnos/IniciarSesion";
 import Registrarse from "../pages/alumnos/Registrarse";
+import Perfil from "../pages/alumnos/Perfil";
  
 
 function AppRoutes() {
@@ -12,9 +13,10 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<AlumnosLayout />}>
         <Route index element={<Home />} />
-        <Route path="acerca-de-nosotros" element={<AcercadeNosotros />} />
-        <Route path="iniciar-sesion" element={<IniciarSesion />} />
-        <Route path="registrarse" element={<Registrarse />} />
+        <Route path="/acerca-de-nosotros" element={<AcercadeNosotros />} />
+        <Route path="/iniciar-sesion" element={<IniciarSesion />} />
+        <Route path="/registrarse" element={<Registrarse />} />
+        <Route path="/perfil" element={<Perfil />} />
       </Route>
     </Routes>
   );
