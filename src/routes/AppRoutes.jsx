@@ -7,6 +7,7 @@ import IniciarSesion from "../pages/alumnos/IniciarSesion";
 import Registrarse from "../pages/alumnos/Registrarse";
 import Perfil from "../pages/alumnos/Perfil";
 import Soporte from "../pages/alumnos/Soporte";
+import CursosActual from "../pages/alumnos/CursosActual";
  
 
 function AppRoutes() {
@@ -19,6 +20,8 @@ function AppRoutes() {
         <Route path="/registrarse" element={<Registrarse />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/soporte" element={<Soporte />} />
+        <Route path="/cursos-actuales" element={<CursosActual />} />
+
       </Route>
     </Routes>
   );
