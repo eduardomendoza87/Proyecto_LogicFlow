@@ -35,7 +35,7 @@ const perfilDataEjemplo = {
 };
 
 function Perfil(){
-    const perfilData = perfilDataEjemplo; // Aquí puedes usar el perfilDataEjemplo o cargar datos reales
+    const perfilData = perfilDataEjemplo; 
     
     if (!perfilData) {
         return <div>Cargando perfil...</div>;

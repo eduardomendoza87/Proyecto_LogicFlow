@@ -12,7 +12,7 @@ function Inicio() {
   const [card4Ref, card4InView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div className=" bg-cafe4Personalizado container mx-auto p-8 bg-gray-100 min-h-screen">
+    <div className="bg-cafe4Personalizado container mx-auto p-8  min-h-screen">
       {/* Título principal */}
       <h1
         ref={tituloref}

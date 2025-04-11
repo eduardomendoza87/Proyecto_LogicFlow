@@ -6,6 +6,7 @@ import AcercadeNosotros from "../pages/alumnos/AcercadeNosotros";
 import IniciarSesion from "../pages/alumnos/IniciarSesion";
 import Registrarse from "../pages/alumnos/Registrarse";
 import Perfil from "../pages/alumnos/Perfil";
+import Soporte from "../pages/alumnos/Soporte";
  
 
 function AppRoutes() {
@@ -17,6 +18,7 @@ function AppRoutes() {
         <Route path="/iniciar-sesion" element={<IniciarSesion />} />
         <Route path="/registrarse" element={<Registrarse />} />
         <Route path="/perfil" element={<Perfil />} />
+        <Route path="/soporte" element={<Soporte />} />
       </Route>
     </Routes>
   );
