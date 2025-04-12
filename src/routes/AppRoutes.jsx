@@ -10,6 +10,10 @@ import Soporte from "../pages/alumnos/Soporte";
 import CursosActual from "../pages/alumnos/CursosActual";
 import ClasesVirtuales from "../pages/alumnos/ClasesVirtuales";
 import Horario from "../pages/alumnos/Horario";
+import CursosDisponibles from "../pages/alumnos/CursosDisponibles";
+import Inscribirse from "../pages/alumnos/Inscribirse";
+import FormularioInscripcion from "../components/Formularios/FormularioInscripcion";
+
  
 
 function AppRoutes() {
@@ -25,6 +29,9 @@ function AppRoutes() {
         <Route path="/cursos-actuales" element={<CursosActual />} />
         <Route path="/clases-virtuales" element={<ClasesVirtuales />} />
         <Route path="/horario" element={<Horario />} />
+        <Route path="/explorarclase" element={<CursosDisponibles />} />
+        <Route path="/inscribirse" element={<Inscribirse />} />
+        <Route path="/formulario-inscripcion" element={<FormularioInscripcion />} />
 
       </Route>
     </Routes>

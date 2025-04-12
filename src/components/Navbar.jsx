@@ -50,7 +50,6 @@ function Navbar() {
             {submenu === "explorar" && (
               <ul className="absolute bg-white text-black mt-2 p-2 rounded shadow-lg z-10">
                 <li><Link to="/explorarclase" className="block px-4 py-2 hover:bg-gray-100">Ver cursos disponibles</Link></li>
-                <li><Link to="/solicitar-inscripcion" className="block px-4 py-2 hover:bg-gray-100">Solicitar inscripción</Link></li>
               </ul>
             )}
           </li>
