@@ -38,7 +38,7 @@ function Navbar() {
             {submenu === "clases" && (
               <ul className="absolute bg-white text-black mt-2 p-2 rounded shadow-lg z-10">
                 <li><Link to="/cursos-actuales" className="block px-4 py-2 hover:bg-gray-100">Cursos actuales</Link></li>
-                <li><Link to="/clasedetalle" className="block px-4 py-2 hover:bg-gray-100">Clases virtuales</Link></li>
+                <li><Link to="/clases-virtuales" className="block px-4 py-2 hover:bg-gray-100">Clases virtuales</Link></li>
                 <li><Link to="/horario" className="block px-4 py-2 hover:bg-gray-100">Horario</Link></li>
               </ul>
             )}

@@ -8,6 +8,8 @@ import Registrarse from "../pages/alumnos/Registrarse";
 import Perfil from "../pages/alumnos/Perfil";
 import Soporte from "../pages/alumnos/Soporte";
 import CursosActual from "../pages/alumnos/CursosActual";
+import ClasesVirtuales from "../pages/alumnos/ClasesVirtuales";
+import Horario from "../pages/alumnos/Horario";
  
 
 function AppRoutes() {
@@ -21,6 +23,8 @@ function AppRoutes() {
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/soporte" element={<Soporte />} />
         <Route path="/cursos-actuales" element={<CursosActual />} />
+        <Route path="/clases-virtuales" element={<ClasesVirtuales />} />
+        <Route path="/horario" element={<Horario />} />
 
       </Route>
     </Routes>
