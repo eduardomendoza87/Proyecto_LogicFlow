@@ -65,7 +65,7 @@ function CursosDisponibles() {
         }`}
         >
           <div >
-          <h4 className="text-negroPersonalizado text-center text-lg">Nombre del curso:</h4>
+          <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
             <p className="text-negroPersonalizado text-left text-lg">
               Profesor:
             </p>
@@ -102,7 +102,7 @@ function CursosDisponibles() {
         }`}
         >
           <div >
-          <h4 className="text-negroPersonalizado text-center text-lg">Nombre del curso:</h4>
+          <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
             <p className="text-negroPersonalizado text-left text-lg">
               Profesor:
             </p>
@@ -139,7 +139,7 @@ function CursosDisponibles() {
         }`}
         >
           <div >
-          <h4 className="text-negroPersonalizado text-center text-lg">Nombre del curso:</h4>
+          <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
             <p className="text-negroPersonalizado text-left text-lg">
               Profesor:
             </p>
@@ -175,7 +175,7 @@ function CursosDisponibles() {
         }`}
         >
           <div >
-            <h4 className="text-negroPersonalizado text-center text-lg">Nombre del curso:</h4>
+          <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
             <p className="text-negroPersonalizado text-left text-lg">
               Profesor:
             </p>

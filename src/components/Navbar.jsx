@@ -59,7 +59,7 @@ function Navbar() {
             <button onClick={() => toggleSubmenu("evaluaciones")} className="hover:text-black">Evaluaciones</button>
             {submenu === "evaluaciones" && (
               <ul className="absolute bg-white text-black mt-2 p-2 rounded shadow-lg z-10">
-                <li><Link to="/examenes-activos" className="block px-4 py-2 hover:bg-gray-100">Exámenes activos por curso</Link></li>
+                <li><Link to="/evaluaciones-cursos" className="block px-4 py-2 hover:bg-gray-100">Exámenes activos por curso</Link></li>
                 <li><Link to="/resultados" className="block px-4 py-2 hover:bg-gray-100">Ver resultados</Link></li>
               </ul>
             )}

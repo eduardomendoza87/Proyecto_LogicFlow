@@ -56,8 +56,8 @@ function CursoActual() {
           curso1InView ? "opacity-100" : "opacity-0"
         }`}
         >
-          <div className="text-negroPersonalizado text-left text-lg">
-            Nombre del curso:
+          <div >
+          <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
             <p className="text-negroPersonalizado text-left text-lg">
               Profesor:
             </p>
@@ -95,8 +95,8 @@ function CursoActual() {
           curso2InView ? "opacity-100" : "opacity-0"
         }`}
         >
-          <div className="text-negroPersonalizado text-left text-lg">
-            Nombre del curso:
+          <div >
+          <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
             <p className="text-negroPersonalizado text-left text-lg">
               Profesor:
             </p>
@@ -134,8 +134,8 @@ function CursoActual() {
           curso3InView ? "opacity-100" : "opacity-0"
         }`}
         >
-          <div className="text-negroPersonalizado text-left text-lg">
-            Nombre del curso:
+          <div >
+          <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
             <p className="text-negroPersonalizado text-left text-lg">
               Profesor:
             </p>
@@ -172,8 +172,8 @@ function CursoActual() {
           curso4InView ? "opacity-100" : "opacity-0"
         }`}
         >
-          <div className="text-negroPersonalizado text-left text-lg">
-            Nombre del curso:
+          <div>
+          <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
             <p className="text-negroPersonalizado text-left text-lg">
               Profesor:
             </p>

@@ -34,8 +34,8 @@ function ClasesVirtuales() {
                 clase1InView ? "opacity-100" : "opacity-0"
               }`}
               >
-                <div className="text-negroPersonalizado text-left text-lg">
-                  Nombre del curso:
+                <div >
+                <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
                   <p className="text-negroPersonalizado text-left text-lg">
                     Profesor:
                   </p>
@@ -68,8 +68,8 @@ function ClasesVirtuales() {
                 clase2InView ? "opacity-100" : "opacity-0"
               }`}
               >
-                <div className="text-negroPersonalizado text-left text-lg">
-                  Nombre del curso:
+                <div >
+                <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
                   <p className="text-negroPersonalizado text-left text-lg">
                     Profesor:
                   </p>
@@ -102,8 +102,8 @@ function ClasesVirtuales() {
                 clase3InView ? "opacity-100" : "opacity-0"
               }`}
               >
-                <div className="text-negroPersonalizado text-left text-lg">
-                  Nombre del curso:
+                <div >
+                <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
                   <p className="text-negroPersonalizado text-left text-lg">
                     Profesor:
                   </p>
@@ -135,8 +135,8 @@ function ClasesVirtuales() {
                 clase4InView ? "opacity-100" : "opacity-0"
               }`}
               >
-                <div className="text-negroPersonalizado text-left text-lg">
-                  Nombre del curso:
+                <div >
+                <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
                   <p className="text-negroPersonalizado text-left text-lg">
                     Profesor:
                   </p>

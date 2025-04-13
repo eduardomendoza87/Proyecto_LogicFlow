@@ -5,7 +5,7 @@ function IniciarSesion() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
       {/* Contenedor principal */}
-      <div className="bg-cafe4Personalizado flex flex-col md:flex-row w-full max-w-4xl rounded-lg shadow-lg overflow-hidden bg-white">
+      <div className="bg-cafe4Personalizado flex flex-col md:flex-row w-full max-w-4xl rounded-lg shadow-lg overflow-hidden ">
         
         {/* Imagen a la izquierda */}
         <div className="md:w-1/2">

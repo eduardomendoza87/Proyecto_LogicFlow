@@ -39,7 +39,7 @@ function Inicio() {
             Accede mediante acceso directo a los cursos de la UCLA. Explora una variedad de temas y recursos diseñados para enriquecer tu aprendizaje.
           </p>
           <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
-            <Link to="/cursosdetalle">
+            <Link to="/explorarclase">
               <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
                 Ir a mis cursos
               </button>
@@ -72,7 +72,7 @@ function Inicio() {
           <p className="text-gray-700 mb-4">
             Accede a tus evaluaciones y tareas. Consulta tus notas y progreso.
           </p>  
-          <Link to="/evaluaciones">
+          <Link to="/evaluaciones-cursos">
             <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
               Ver más
             </button>
@@ -112,7 +112,7 @@ function Inicio() {
           <p className="text-gray-700 mb-4">
             Explorar nuevos cursos y recursos. Consulta el calendario académico y eventos importantes.
           </p>
-          <Link to="/explorarcursos">
+          <Link to="/cursos-actuales">
             <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-4 py-2 rounded">
               Ver más
             </button>
