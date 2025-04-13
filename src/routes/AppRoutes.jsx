@@ -17,6 +17,7 @@ import EvaluacionesCursos from "../pages/alumnos/EvalucacionesCursos";
 import VerExamen from "../components/componenteEvaluacion/VerExamen";
 import VerResultados from "../pages/alumnos/VerResultados";
 import VerDetalles from "../components/componenteEvaluacion/VerDetalles";
+import FormularioPerfil from "../components/Formularios/FormularioPerfil";
 
  
 
@@ -40,6 +41,7 @@ function AppRoutes() {
         <Route path="/VerExamen" element={<VerExamen />} />
         <Route path="/resultados" element={<VerResultados />} />
         <Route path="/ver-detalles" element={<VerDetalles />} />
+        <Route path="/formulario-perfil" element={<FormularioPerfil />} />
 
       </Route>
     </Routes>

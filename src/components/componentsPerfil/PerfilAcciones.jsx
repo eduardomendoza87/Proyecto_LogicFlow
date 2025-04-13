@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function PerfilAcciones() {
     return (
         <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
-            <Link to="/editarperfil">
+            <Link to="/formulario-perfil">
                 <button className="bg-cafe2Personalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
                     Editar perfil
                 </button>

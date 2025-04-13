@@ -39,7 +39,7 @@ function Inicio() {
             Accede mediante acceso directo a los cursos de la UCLA. Explora una variedad de temas y recursos diseñados para enriquecer tu aprendizaje.
           </p>
           <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
-            <Link to="/explorarclase">
+            <Link to="/cursos-actuales">
               <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
                 Ir a mis cursos
               </button>
