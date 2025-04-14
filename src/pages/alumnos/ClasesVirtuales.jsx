@@ -46,7 +46,7 @@ function ClasesVirtuales() {
                     Estado:
                   </p>
                   <div className="flex flex-col md:flex-row items-center justify-center mt-4 space-y-2 md:space-y-0 md:space-x-4 w-full">
-                    <Link to="/Unirse">
+                    <Link to="/reunion-llamada">
                     <button className="bg-cafe3Personalizado text-negroPersonalizado font-bold px-4 py-2 rounded-lg hover:bg-opacity-80 shadow-md w-full md:w-auto">
                       Unirse a la clase
                     </button>
@@ -80,7 +80,7 @@ function ClasesVirtuales() {
                     Estado:
                   </p>
                   <div className="flex flex-col md:flex-row items-center justify-center mt-4 space-y-2 md:space-y-0 md:space-x-4 w-full">
-                  <Link to="/Unirse">
+                  <Link to="/reunion-llamada">
                     <button className="bg-cafe3Personalizado text-negroPersonalizado font-bold px-4 py-2 rounded-lg hover:bg-opacity-80 shadow-md w-full md:w-auto">
                       Unirse a la clase
                     </button>
@@ -114,7 +114,7 @@ function ClasesVirtuales() {
                     Estado:
                   </p>
                   <div className="flex flex-col md:flex-row items-center justify-center mt-4 space-y-2 md:space-y-0 md:space-x-4 w-full">
-                  <Link to="/Unirse">
+                  <Link to="/reunion-llamada">
                     <button className="bg-cafe3Personalizado text-negroPersonalizado font-bold px-4 py-2 rounded-lg hover:bg-opacity-80 shadow-md w-full md:w-auto">
                       Unirse a la clase
                     </button>
@@ -147,7 +147,7 @@ function ClasesVirtuales() {
                     Estado:
                   </p>
                   <div className="flex flex-col md:flex-row items-center justify-center mt-4 space-y-2 md:space-y-0 md:space-x-4 w-full">
-                  <Link to="/Unirse">
+                  <Link to="/reunion-llamada">
                     <button className="bg-cafe3Personalizado text-negroPersonalizado font-bold px-4 py-2 rounded-lg hover:bg-opacity-80 shadow-md w-full md:w-auto">
                       Unirse a la clase
                     </button>

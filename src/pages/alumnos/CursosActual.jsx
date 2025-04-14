@@ -46,10 +46,10 @@ function CursoActual() {
 
         
       </div>
-      {/*Card de videollamdas*/}
+      {/*Card de Cursos actuales*/}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 place-items-center">
 
-        {/*Card 1 videollamadas*/}
+        {/*Card 1 */}
         <div
         ref={curso1Ref}
         className={`bg-blancoPersonalizado p-6 text-center w-full max-w-md rounded-lg shadow-lg transition-opacity duration-1000 ${

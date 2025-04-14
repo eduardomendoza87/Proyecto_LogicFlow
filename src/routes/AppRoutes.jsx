@@ -18,12 +18,19 @@ import VerExamen from "../components/componenteEvaluacion/VerExamen";
 import VerResultados from "../pages/alumnos/VerResultados";
 import VerDetalles from "../components/componenteEvaluacion/VerDetalles";
 import FormularioPerfil from "../components/Formularios/FormularioPerfil";
+import ReunionLLamada from "../pages/alumnos/ReunionLlamada"
+
+
+//*Aqui van las importaciones de docentes
+import DocentesLayout from "../layouts/DocentesLayout";
+import InicioDocente from "../pages/docentes/InicioDocente";
 
  
 
 function AppRoutes() {
   return (
     <Routes>
+      {/* Rutas para el layout de alumnos */}
       <Route path="/" element={<AlumnosLayout />}>
         <Route index element={<Home />} />
         <Route path="/acerca-de-nosotros" element={<AcercadeNosotros />} />
@@ -42,8 +49,15 @@ function AppRoutes() {
         <Route path="/resultados" element={<VerResultados />} />
         <Route path="/ver-detalles" element={<VerDetalles />} />
         <Route path="/formulario-perfil" element={<FormularioPerfil />} />
+        <Route path="/reunion-llamada" element={<ReunionLLamada />} />
+        </Route>
 
-      </Route>
+        {/*Rutas para el layout de docentes */}
+        <Route path="/docente" element={<DocentesLayout />}>
+  <Route path="inicio" element={<InicioDocente />} />
+  
+</Route>
+
     </Routes>
   );
 }

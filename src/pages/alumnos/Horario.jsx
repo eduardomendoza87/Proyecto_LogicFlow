@@ -1,5 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 function Horario() {
   const [horarioTref, horarioTInView] = useInView({ triggerOnce: true, threshold: 0.2 });

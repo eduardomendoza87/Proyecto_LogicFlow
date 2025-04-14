@@ -25,10 +25,10 @@ function AcercadeNosotros() {
       </h1>
 
       {/* Secciones en formato grid */}
-      <div className="space-y-28">
+      <div className="space-y-28 ">
 
         {/* Misión */}
-        <section className="flex flex-col md:flex-row items-center gap-12">
+        <section className="flex flex-col md:flex-row items-center gap-12 ">
           <div
             ref={acerca1ref}
             className={`bg-blancoPersonalizado p-6 text-center rounded-xl shadow-lg md:w-1/2 transition-opacity duration-1000 ${
@@ -47,7 +47,7 @@ function AcercadeNosotros() {
         </section>
 
         {/* Visión */}
-        <section className="flex flex-col md:flex-row-reverse items-center gap-12">
+        <section className="flex flex-col md:flex-row-reverse items-center gap-12 ">
           <div
             ref={acerca2ref}
             className={`bg-blancoPersonalizado p-6 text-center md:w-1/2 rounded-xl shadow-lg transition-opacity duration-1000 ${

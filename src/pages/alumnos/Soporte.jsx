@@ -70,6 +70,13 @@ function Soporte() {
           ))}
         </div>
       </div>
+      <div className="mt-12 text-center text-negroPersonalizado">
+  <p>¿No encontraste lo que buscabas?</p>
+  <a href="mailto:soporte@ucla.edu.mx" className="text-blue-600 underline hover:text-blue-800">
+    Contáctanos directamente aquí
+  </a>
+</div>
+
     </div>
   );
 }
