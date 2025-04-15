@@ -24,6 +24,8 @@ import ReunionLLamada from "../pages/alumnos/ReunionLlamada"
 //*Aqui van las importaciones de docentes
 import DocentesLayout from "../layouts/DocentesLayout";
 import InicioDocente from "../pages/docentes/InicioDocente";
+import MisCursos from "../pages/docentes/MisCursos";  
+import CrearCurso from "../pages/docentes/CrearCurso"; // Asegúrate de que la ruta sea correcta
 
  
 
@@ -55,6 +57,9 @@ function AppRoutes() {
         {/*Rutas para el layout de docentes */}
         <Route path="/docente" element={<DocentesLayout />}>
   <Route path="inicio" element={<InicioDocente />} />
+  <Route path="mis-cursos" element={<MisCursos />} />
+  <Route path="crear-curso" element={<CrearCurso />} /> {/* Asegúrate de que la ruta sea correcta */}
+  {/* Puedes agregar más rutas para el layout de docentes aquí */}
   
 </Route>
 

@@ -18,7 +18,7 @@ function IniciarSesion() {
       navigate("/"); // Redirige a la página de alumno
     } else if (email === "docente@ucla.edu" && password === "4321") {
       localStorage.setItem("usuarioRol", "docente");
-      navigate("/docente"); // Redirige a la página de docente
+      navigate("/docente/inicio"); // Redirige a la página de docente
     } else {
       alert("Credenciales inválidas");
     }
