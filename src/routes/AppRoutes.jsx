@@ -25,9 +25,9 @@ import ReunionLLamada from "../pages/alumnos/ReunionLlamada"
 import DocentesLayout from "../layouts/DocentesLayout";
 import InicioDocente from "../pages/docentes/InicioDocente";
 import MisCursos from "../pages/docentes/MisCursos";  
-import CrearCurso from "../pages/docentes/CrearCurso"; // Asegúrate de que la ruta sea correcta
-
- 
+import CrearCurso from "../pages/docentes/CrearCurso"; 
+import AdminEvaluaciones from "../pages/docentes/AdminEvaluaciones"; 
+import CrearEvaluacion from "../components/ComponenteDocente/CrearEvaluacion"; 
 
 function AppRoutes() {
   return (
@@ -58,9 +58,9 @@ function AppRoutes() {
         <Route path="/docente" element={<DocentesLayout />}>
   <Route path="inicio" element={<InicioDocente />} />
   <Route path="mis-cursos" element={<MisCursos />} />
-  <Route path="crear-curso" element={<CrearCurso />} /> {/* Asegúrate de que la ruta sea correcta */}
-  {/* Puedes agregar más rutas para el layout de docentes aquí */}
-  
+  <Route path="crear-curso" element={<CrearCurso />} /> 
+  <Route path="admin-evaluaciones" element={<AdminEvaluaciones />} />
+  <Route path="crear-evaluacion" element={<CrearEvaluacion />} />
 </Route>
 
     </Routes>

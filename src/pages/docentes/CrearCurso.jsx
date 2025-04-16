@@ -151,8 +151,6 @@ function CrearCurso() {
                                     Cancelar
                                 </button>
                                 </Link>
-
-
                             </div>
 
                            
