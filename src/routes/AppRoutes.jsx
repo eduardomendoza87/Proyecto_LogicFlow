@@ -28,6 +28,10 @@ import MisCursos from "../pages/docentes/MisCursos";
 import CrearCurso from "../pages/docentes/CrearCurso"; 
 import AdminEvaluaciones from "../pages/docentes/AdminEvaluaciones"; 
 import CrearEvaluacion from "../components/ComponenteDocente/CrearEvaluacion"; 
+import VerEvaluacion from "../components/ComponenteDocente/VerEvaluacion";
+import CalificarRespuestas from "../components/ComponenteDocente/CalificarRespuestas";
+import VerRespuestas from "../components/ComponenteDocente/VerRespuestas";
+import EditarEvaluacion from "../components/ComponenteDocente/EditarEvaluacion";
 
 function AppRoutes() {
   return (
@@ -61,6 +65,11 @@ function AppRoutes() {
   <Route path="crear-curso" element={<CrearCurso />} /> 
   <Route path="admin-evaluaciones" element={<AdminEvaluaciones />} />
   <Route path="crear-evaluacion" element={<CrearEvaluacion />} />
+  <Route path="ver-evaluacion" element={<VerEvaluacion />} />
+  <Route path="calificar-respuestas" element={<CalificarRespuestas />} />
+  <Route path="ver-respuestas" element={<VerRespuestas />} />
+  <Route path="editar-evaluacion" element={<EditarEvaluacion/>} /> 
+  
 </Route>
 
     </Routes>

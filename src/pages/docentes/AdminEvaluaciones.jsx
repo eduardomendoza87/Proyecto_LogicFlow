@@ -68,17 +68,17 @@ function AdminEvaluaciones() {
               
                         {/* Botones de acción con scroll en pantallas pequeñas */}
                         <div className="flex flex-wrap justify-center mt-6 gap-3 overflow-x-auto">
-                          <Link to="/VerEvaluacion">
+                          <Link to="/docente/ver-evaluacion">
                             <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
                               Ver evaluacion
                             </button>
                           </Link>
-                          <Link to="/CalificarRespuestas">
+                          <Link to="/docente/calificar-respuestas">
                             <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
                                Calificar respuestas
                             </button>
                           </Link>
-                          <Link to="/EditarEvaluacion">
+                          <Link to="/docente/editar-evaluacion">
                             <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
                               Editar evaluacion
                             </button>
@@ -105,7 +105,7 @@ function AdminEvaluaciones() {
               
                         {/* Botones de acción con scroll en pantallas pequeñas */}
                         <div className="flex flex-wrap justify-center mt-6 gap-3 overflow-x-auto">
-                          <Link to="/VerEvaluacion">
+                          <Link to="/ver-evaluacion">
                             <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
                               Ver evaluacion
                             </button>
