@@ -62,7 +62,7 @@ function VerEvaluacion() {
                         Editar evaluacion
                     </button>
                 </Link>
-                <Link to="/docente/VerRespuestasAlumnos">
+                <Link to="/docente/ver-evaluacion/calificar-respuestass">
                     <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
                         Ver respuestas de alumnos
                     </button>

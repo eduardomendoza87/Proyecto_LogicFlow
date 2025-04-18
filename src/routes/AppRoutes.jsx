@@ -32,6 +32,8 @@ import VerEvaluacion from "../components/ComponenteDocente/VerEvaluacion";
 import CalificarRespuestas from "../components/ComponenteDocente/CalificarRespuestas";
 import VerRespuestas from "../components/ComponenteDocente/VerRespuestas";
 import EditarEvaluacion from "../components/ComponenteDocente/EditarEvaluacion";
+import Seguimiento from "../pages/docentes/Seguimiento"; 
+import VerDetallesAlumno from "../components/ComponenteDocente/VerDetallesAlumno"; // Asegúrate de que la ruta sea correcta
 
 function AppRoutes() {
   return (
@@ -69,6 +71,8 @@ function AppRoutes() {
   <Route path="calificar-respuestas" element={<CalificarRespuestas />} />
   <Route path="ver-respuestas" element={<VerRespuestas />} />
   <Route path="editar-evaluacion" element={<EditarEvaluacion/>} /> 
+  <Route path="seguimiento" element={<Seguimiento />} />
+  <Route path="ver-detalles-alumno" element={<VerDetallesAlumno />} /> {/* Asegúrate de que la ruta sea correcta */}
   
 </Route>
 

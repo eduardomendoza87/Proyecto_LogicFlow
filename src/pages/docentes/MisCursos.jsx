@@ -64,11 +64,11 @@ function MisCursos() {
         <div className="bg-blancoPersonalizado p-6 rounded-lg shadow">
           <h4 className="text-xl font-semibold mb-4 text-negroPersonalizado">Curso: Desarrollo Web</h4>
           <div className="space-y-2 text-negroPersonalizado">
-            <p>📅 Semestre: 5to</p>
-            <p>🧑‍🏫 Modalidad: Virtual</p>
-            <p>👥 Alumnos inscritos: 30</p>
-            <p>📅 Fecha de creación: 2024-08-01</p>
-            <p>📌 Estado: Activo</p>
+            <p> Semestre: 5to</p>
+            <p> Modalidad: Virtual</p>
+            <p> Alumnos inscritos: 30</p>
+            <p> Fecha de creación: 2024-08-01</p>
+            <p> Estado: Activo</p>
           </div>
 
           {/* Botones de acción con scroll en pantallas pequeñas */}

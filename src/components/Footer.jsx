@@ -7,7 +7,7 @@ function Footer() {
                 
                 {/* Derechos Reservados */}
                 <div>
-                    <p>{new Date().getFullYear()} EduSpark. Todos los derechos reservados</p>
+                    <p>{new Date().getFullYear()} UCLA. Todos los derechos reservados</p>
                 </div>
                 
                 {/* Redes Sociales */}
