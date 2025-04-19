@@ -63,7 +63,7 @@ function NavbarDocente() {
           </li>
 
           {/* Perfil */}
-          <li><Link to="/docente/perfil" className="hover:text-black">Perfil</Link></li>
+          <li><Link to="/docente/perfil-docente" className="hover:text-black">Perfil</Link></li>
 
           {/* Cerrar sesión */}
           <li>
