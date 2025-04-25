@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function AdminEvaluaciones() {
+function EvaluacionesDelCurso() {
   const [showModal, setShowModal] = useState(false);
 
   const handleEliminarEvaluacion = () => {
@@ -13,7 +13,7 @@ function AdminEvaluaciones() {
     <div className="bg-cafe4Personalizado container mx-auto p-8 min-h-screen">
       {/* Título principal */}
       <h1 className="text-2xl md:text-4xl font-bold text-center mb-6 text-negroPersonalizado">
-        Administrar evaluaciones
+        Evaluaciones del curso
       </h1>
 
       {/* Resumen superior */}
@@ -27,23 +27,24 @@ function AdminEvaluaciones() {
       <div className="flex flex-col md:flex-row gap-6 flex-wrap mb-16">
         <input
           type="text"
-          placeholder="Buscar"
+          placeholder="Buscar por nombre evaluación"
           className="shadow border rounded py-2 px-3 w-full md:flex-1 text-negroPersonalizado focus:ring-2 focus:ring-cafe1Personalizado"
         />
         <select className="border rounded p-2 w-full md:w-1/4">
           <option>Tipo</option>
-          <option>Evaluacion</option>
+          <option>Evaluación</option>
           <option>Actividad</option>
         </select>
         <select className="border rounded p-2 w-full md:w-1/4">
-          <option>Fecha de creacion</option>
+          <option>Fecha de creación</option>
           <option>Hoy</option>
-          <option>Ultima semana</option>
+          <option>Última semana</option>
+          <option>Este mes</option>
         </select>
         <select className="border rounded p-2 w-full md:w-1/4">
           <option>Estado</option>
-          <option>En curso</option>
-          <option>Pendiente</option>
+          <option>Borrador</option>
+          <option>Publicado</option>
           <option>Calificado</option>
         </select>
       </div>
@@ -58,16 +59,17 @@ function AdminEvaluaciones() {
       </div>
 
       {/* Cards de Evaluaciones */}
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="bg-blancoPersonalizado p-6 rounded-lg shadow">
           <h4 className="text-xl font-semibold mb-4 text-negroPersonalizado">Curso: Desarrollo Web</h4>
           <div className="space-y-2 text-negroPersonalizado">
-            <p>Nombre de la evaluación:</p>
-            <p>Tipo:</p>
-            <p>Duración:</p>
-            <p>Fecha de entrega:</p>
-            <p>Estado:</p>
-            <p>Total de alumnos:</p>
+            <p><strong>Nombre:</strong> Examen Parcial #1</p>
+            <p><strong>Tipo:</strong> Evaluación</p>
+            <p><strong>Estado:</strong> Publicado</p>
+            <p><strong>Duración:</strong> 45 minutos</p>
+            <p><strong>Fecha de entrega:</strong> 2025-05-10</p>
+            <p><strong>Total de alumnos:</strong> 25</p>
+            <p><strong>Calificación promedio:</strong> 8.5</p>
           </div>
 
           <div className="flex flex-wrap justify-center mt-6 gap-3 overflow-x-auto">
@@ -94,43 +96,6 @@ function AdminEvaluaciones() {
             </button>
           </div>
         </div>
-
-        {/* Card 2 (opcional para duplicar dinámica) */}
-        <div className="bg-blancoPersonalizado p-6 rounded-lg shadow">
-          <h4 className="text-xl font-semibold mb-4 text-negroPersonalizado">Curso: Desarrollo Web</h4>
-          <div className="space-y-2 text-negroPersonalizado">
-            <p>Nombre de la evaluación:</p>
-            <p>Tipo:</p>
-            <p>Duración:</p>
-            <p>Fecha de entrega:</p>
-            <p>Estado:</p>
-            <p>Total de alumnos:</p>
-          </div>
-
-          <div className="flex flex-wrap justify-center mt-6 gap-3 overflow-x-auto">
-            <Link to="/ver-evaluacion">
-              <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
-                Ver evaluación
-              </button>
-            </Link>
-            <Link to="/CalificarRespuestas">
-              <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
-                Calificar respuestas
-              </button>
-            </Link>
-            <Link to="/EditarEvaluacion">
-              <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
-                Editar evaluación
-              </button>
-            </Link>
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600"
-            >
-              Eliminar evaluación
-            </button>
-          </div>
-        </div>
       </div>
 
       {/* Modal de confirmación */}
@@ -138,7 +103,7 @@ function AdminEvaluaciones() {
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
           <div className="bg-white p-8 rounded-lg shadow-lg text-center max-w-sm w-full">
             <h2 className="text-xl font-bold mb-4">¿Eliminar evaluación?</h2>
-            <p className="mb-6">Esta acción no se puede deshacer. ¿Estás seguro?</p>
+            <p className="mb-6 text-gray-700">Esta acción no se puede deshacer. ¿Estás seguro?</p>
             <div className="flex justify-center gap-4">
               <button
                 onClick={() => setShowModal(false)}
@@ -160,4 +125,4 @@ function AdminEvaluaciones() {
   );
 }
 
-export default AdminEvaluaciones;
+export default EvaluacionesDelCurso;

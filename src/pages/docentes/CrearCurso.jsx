@@ -102,7 +102,7 @@ function CrearCurso() {
                                     className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
                             </div>
                             <div>
-                                <label htmlFor="feahcafin" className="block font-bold mb-1">Fecha fin:</label>
+                                <label htmlFor="fechafin" className="block font-bold mb-1">Fecha fin:</label>
                                 <input id="fechafin" type="date" required placeholder="Fecha fin"
                                     className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
                             </div>

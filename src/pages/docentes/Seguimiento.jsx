@@ -69,7 +69,6 @@ function Seguimiento() {
                   Ver detalles
                 </button>
                 </Link>
-
               </td>
             </tr>
           </tbody>

@@ -49,7 +49,7 @@ function HomeDocente() {
 
         {/* Card 4 */}
         <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center  transition-opacity duration-1000">
-          <p className="text-xl font-semibold mb-6 text-negroPersonalizado" > Evaluaciones subidas </p>
+          <p className="text-xl font-semibold mb-6 text-negroPersonalizado" > Materiales subidos </p>
         </div>
         </div>
 
@@ -64,22 +64,66 @@ function HomeDocente() {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/*Card 1*/}
         <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
-          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Curso </p>
+          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Nombre del curso: </p>
+          <p className="text-left"><strong>Cantidad de alumnos:</strong></p>
+
+          {/*Boton*/}
+          <div className="flex flex-wrap justify-center mt-6 gap-3 overflow-x-auto">
+          <Link to="/docente/mis-cursos">
+          <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
+            Ir al curso
+          </button>
+          </Link>
+            
+          </div>
         </div>
 
-        {/*Card  2*/}
+        {/*Card 2*/}
         <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
-          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Curso </p>
+          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Nombre del curso: </p>
+          <p className="text-left"><strong>Cantidad de alumnos:</strong></p>
+
+          {/*Boton*/}
+          <div className="flex flex-wrap justify-center mt-6 gap-3 overflow-x-auto">
+          <Link to="/docente/mis-cursos">
+          <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
+            Ir al curso
+          </button>
+          </Link>
+            
+          </div>
         </div>
 
         {/*Card 3*/}
         <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
-          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Curso </p>
+          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Nombre del curso: </p>
+          <p className="text-left"><strong>Cantidad de alumnos:</strong></p>
+
+          {/*Boton*/}
+          <div className="flex flex-wrap justify-center mt-6 gap-3 overflow-x-auto">
+          <Link to="/docente/mis-cursos">
+          <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
+            Ir al curso
+          </button>
+          </Link>
+            
+          </div>
         </div>
 
-        {/*Card  4*/}
+        {/*Card 4*/}
         <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
-          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Curso </p>
+          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Nombre del curso: </p>
+          <p className="text-left"><strong>Cantidad de alumnos:</strong></p>
+
+          {/*Boton*/}
+          <div className="flex flex-wrap justify-center mt-6 gap-3 overflow-x-auto">
+          <Link to="/docente/mis-cursos">
+          <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
+            Ir al curso
+          </button>
+          </Link>
+            
+          </div>
         </div>
         </div>
 
@@ -91,7 +135,7 @@ function HomeDocente() {
         <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
           <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Crear curso </p>
           <p className="text-lg text-gray-700">
-            Accede mediante acceso directo a las guias de uso de la plataforma. Explora una variedad de temas y recursos diseñados para enriquecer tu aprendizaje.
+            Aprende a crear cursos con este video tutorial.
           </p>
           <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
             <Link to="/crear-curso">
@@ -106,7 +150,7 @@ function HomeDocente() {
         <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
           <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Subir materiales </p>
           <p className="text-lg text-gray-700">
-            Accede mediante acceso directo a las guias de uso de la plataforma. Explora una variedad de temas y recursos diseñados para enriquecer tu aprendizaje.
+            Aprende a subir material didactico con este video tutorial.
           </p>
           <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
             <Link to="/crear-curso">
@@ -117,11 +161,11 @@ function HomeDocente() {
             </div>
         </div>
 
-        {/*Card 1*/}
+        {/*Card 3*/}
         <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
-          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Crear y calificar evaluaciones </p>
+          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Crear evaluaciones </p>
           <p className="text-lg text-gray-700">
-            Accede mediante acceso directo a las guias de uso de la plataforma. Explora una variedad de temas y recursos diseñados para enriquecer tu aprendizaje.
+             Aprende a crear evaluaciones con este video tutorial
           </p>
           <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
             <Link to="/crear-curso">
@@ -132,11 +176,56 @@ function HomeDocente() {
             </div>
         </div>
 
-        {/*Card 1*/}
+        {/*Card 4*/}
         <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
           <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Revisar el progreso de estudiante </p>
           <p className="text-lg text-gray-700">
-            Accede mediante acceso directo a las guias de uso de la plataforma. Explora una variedad de temas y recursos diseñados para enriquecer tu aprendizaje.
+            Aprende a revisar el progreso del estudiante mediante este video tutorial.
+          </p>
+          <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
+            <Link to="/crear-curso">
+              <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
+                Ir al tutorial
+              </button>
+            </Link>
+            </div>
+        </div> 
+        
+        {/*Card 5*/}
+        <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
+          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Actualizar datos </p>
+          <p className="text-lg text-gray-700">
+            Aprende a actualizar tus datos mediante este video tutorial
+          </p>
+          <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
+            <Link to="/crear-curso">
+              <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
+                Ir al tutorial
+              </button>
+            </Link>
+            </div>
+        </div> 
+
+        {/*Card 6*/}
+        <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
+          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Calificar evaluaciones </p>
+          <p className="text-lg text-gray-700">
+            Aprende a calificar tus evaluaciones mediante este video tutorial
+          </p>
+          <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
+            <Link to="/crear-curso">
+              <button className="bg-cafe3Personalizado hover:bg-opacity-80 text-black px-6 py-2 rounded-lg shadow">
+                Ir al tutorial
+              </button>
+            </Link>
+            </div>
+        </div> 
+
+        {/*Card 7*/}
+        <div className="bg-blancoPersonalizado shadow p-6 rounded-lg text-center transition-opacity duration-1000">
+          <p className="text-xl font-semibold mb-6 text-negroPersonalizado">Editar evaluaciones </p>
+          <p className="text-lg text-gray-700">
+            Aprende a editar tus evaluaciones mediante este video tutorial
           </p>
           <div className="mt-8 justify-center flex flex-col sm:flex-row gap-4">
             <Link to="/crear-curso">

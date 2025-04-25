@@ -36,6 +36,20 @@ import Seguimiento from "../pages/docentes/Seguimiento";
 import VerDetallesAlumno from "../components/ComponenteDocente/VerDetallesAlumno"; 
 import PerfilDocente from "../pages/docentes/PerfilDocente";
 import EditarPerfilDocente from "../components/ComponenteDocente/EditarPerfilDocente";
+import MaterialesCurso from "../components/ComponenteDocente/MaterialesCurso";
+import FormularioSubirArchivo from "../components/ComponenteDocente/FormularioSubirArchivo";
+import EditarMateriales from "../components/ComponenteDocente/EditarMateriales";
+import ModulosyClases from "../components/ComponenteDocente/ModulosyClases";
+import CrearModulo from "../components/ComponenteDocente/CrearModulo";
+import CrearClase from "../components/ComponenteDocente/CrearClase";
+import VerClases from "../components/ComponenteDocente/VerClases";
+import VerDetallesClase from "../components/ComponenteDocente/VerDetallesClases";
+import EditarClase from "../components/ComponenteDocente/EditarClase";
+import EvaluacionesDelCurso from "../components/ComponenteDocente/EvaluacionesDelCurso";
+import Estudiantes from "../components/ComponenteDocente/Estudiantes";
+import DetallesAlumnoCurso from "../components/ComponenteDocente/DetallesAlumnoCurso";
+import VerRespuestasEvaluacion from "../components/ComponenteDocente/VerRespuestasEvaluacion";
+import EditarCurso from "../components/ComponenteDocente/EditarCurso";
 
 function AppRoutes() {
   return (
@@ -77,6 +91,20 @@ function AppRoutes() {
   <Route path="ver-detalles-alumno" element={<VerDetallesAlumno />} /> 
   <Route path="perfil-docente" element={<PerfilDocente/>}/>
   <Route path="editar-perfil-docente" element={<EditarPerfilDocente/>}/>
+  <Route path="materiales-curso" element={<MaterialesCurso/>}/>
+  <Route path="formulario-materiales" element={<FormularioSubirArchivo/>}/>
+  <Route path="editar-materiales" element={<EditarMateriales/>}/>
+  <Route path="modulos-y-clases" element={<ModulosyClases/>}/>
+  <Route path="crear-modulo" element={<CrearModulo/>}/>
+  <Route path="crear-clase" element={<CrearClase/>}/>
+  <Route path="ver-clases" element={<VerClases/>}/>
+  <Route path="ver-detalles-clase" element={<VerDetallesClase/>}/>
+  <Route path="editar-clase" element={<EditarClase/>}/>
+  <Route path="evaluacion-curso" element={<EvaluacionesDelCurso/>}/>
+  <Route path="estudiantes" element={<Estudiantes/>}/>
+  <Route path="detalles-alumno-curso" element={<DetallesAlumnoCurso/>}/>
+  <Route path="ver-respuesta-evaluacion" element={<VerRespuestasEvaluacion/>}/>
+  <Route path="editar-curso" element={<EditarCurso/>}/>
   
 </Route>
 

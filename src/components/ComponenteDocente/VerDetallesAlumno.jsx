@@ -69,7 +69,7 @@ function VerDetallesAlumno() {
               <td>entregado</td>
               <td>07/05/2025 </td>
               <td>
-                <Link to="/docente/ver-detalles-alumno">
+                <Link to="/docente/ver-respuesta-evaluacion">
                 <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">
                   Ver respuestas
                 </button>

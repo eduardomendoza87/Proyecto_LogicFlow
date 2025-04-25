@@ -136,6 +136,7 @@ function EditarEvaluacion(){
                                     <input id="url" type="url" required placeholder="Agregar url"
                                         className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
                                 </div>
+                                {/*Botones*/}
                                 <div className="flex flex-col  items-center justify-center mt-4 space-y-2 md:space-y-0 md:space-x-4 w-full">
                             <button className="bg-cafe2Personalizado text-white font-bold py-2 px-4 rounded shadow hover:bg-cafe3Personalizado focus:outline-none focus:ring-2 focus:ring-cafe2Personalizado focus:ring-opacity-50 mb-4">
                                 Reemplazar
