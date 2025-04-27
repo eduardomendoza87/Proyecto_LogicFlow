@@ -1,10 +1,18 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/alumnos/Inicio";
+import RutaPrivada from "../components/RutaPrivada";
+
+// Layouts
 import AlumnosLayout from "../layouts/AlumnosLayout";
+import DocentesLayout from "../layouts/DocentesLayout";
+
+// Páginas públicas
+import Home from "../pages/alumnos/Inicio";
 import AcercadeNosotros from "../pages/alumnos/AcercadeNosotros";
 import IniciarSesion from "../pages/alumnos/IniciarSesion";
 import Registrarse from "../pages/alumnos/Registrarse";
+
+// Páginas privadas alumnos
 import Perfil from "../pages/alumnos/Perfil";
 import Soporte from "../pages/alumnos/Soporte";
 import CursosActual from "../pages/alumnos/CursosActual";
@@ -18,11 +26,16 @@ import VerExamen from "../components/componenteEvaluacion/VerExamen";
 import VerResultados from "../pages/alumnos/VerResultados";
 import VerDetalles from "../components/componenteEvaluacion/VerDetalles";
 import FormularioPerfil from "../components/Formularios/FormularioPerfil";
-import ReunionLLamada from "../pages/alumnos/ReunionLlamada"
+import ReunionLLamada from "../pages/alumnos/ReunionLlamada";
+import VerModulos from "../components/componentesAlumnos/VerModulos";
+import VerClase from "../components/componentesAlumnos/VerClase";
+import Materiales from "../components/componentesAlumnos/Materiales";
+import EvaluacionesEspecifica from "../components/componentesAlumnos/EvaluacionEspecifica";
+import VerEnvio from "../components/componenteEvaluacion/VerEnvio";
+import VerCalificacion from "../components/componenteEvaluacion/VerCalificacion";
+import DetallesClase from "../components/componentesAlumnos/DetallesClase";
 
-
-//*Aqui van las importaciones de docentes
-import DocentesLayout from "../layouts/DocentesLayout";
+// Páginas docentes
 import InicioDocente from "../pages/docentes/InicioDocente";
 import MisCursos from "../pages/docentes/MisCursos";  
 import CrearCurso from "../pages/docentes/CrearCurso"; 
@@ -50,64 +63,84 @@ import Estudiantes from "../components/ComponenteDocente/Estudiantes";
 import DetallesAlumnoCurso from "../components/ComponenteDocente/DetallesAlumnoCurso";
 import VerRespuestasEvaluacion from "../components/ComponenteDocente/VerRespuestasEvaluacion";
 import EditarCurso from "../components/ComponenteDocente/EditarCurso";
+import Vermas from "../components/componentesAlumnos/Vermas";
 
 function AppRoutes() {
   return (
     <Routes>
-      {/* Rutas para el layout de alumnos */}
+      {/* Layout alumnos */}
       <Route path="/" element={<AlumnosLayout />}>
         <Route index element={<Home />} />
         <Route path="/acerca-de-nosotros" element={<AcercadeNosotros />} />
         <Route path="/iniciar-sesion" element={<IniciarSesion />} />
         <Route path="/registrarse" element={<Registrarse />} />
-        <Route path="/perfil" element={<Perfil />} />
-        <Route path="/soporte" element={<Soporte />} />
-        <Route path="/cursos-actuales" element={<CursosActual />} />
-        <Route path="/clases-virtuales" element={<ClasesVirtuales />} />
-        <Route path="/horario" element={<Horario />} />
-        <Route path="/explorarclase" element={<CursosDisponibles />} />
-        <Route path="/inscribirse" element={<Inscribirse />} />
-        <Route path="/formulario-inscripcion" element={<FormularioInscripcion />} />
-        <Route path="/evaluaciones-cursos" element={<EvaluacionesCursos />} />
-        <Route path="/VerExamen" element={<VerExamen />} />
-        <Route path="/resultados" element={<VerResultados />} />
-        <Route path="/ver-detalles" element={<VerDetalles />} />
-        <Route path="/formulario-perfil" element={<FormularioPerfil />} />
-        <Route path="/reunion-llamada" element={<ReunionLLamada />} />
-        </Route>
 
-        {/*Rutas para el layout de docentes */}
-        <Route path="/docente" element={<DocentesLayout />}>
-  <Route path="inicio" element={<InicioDocente />} />
-  <Route path="mis-cursos" element={<MisCursos />} />
-  <Route path="crear-curso" element={<CrearCurso />} /> 
-  <Route path="admin-evaluaciones" element={<AdminEvaluaciones />} />
-  <Route path="crear-evaluacion" element={<CrearEvaluacion />} />
-  <Route path="ver-evaluacion" element={<VerEvaluacion />} />
-  <Route path="calificar-respuestas" element={<CalificarRespuestas />} />
-  <Route path="ver-respuestas" element={<VerRespuestas />} />
-  <Route path="editar-evaluacion" element={<EditarEvaluacion/>} /> 
-  <Route path="seguimiento" element={<Seguimiento />} />
-  <Route path="ver-detalles-alumno" element={<VerDetallesAlumno />} /> 
-  <Route path="perfil-docente" element={<PerfilDocente/>}/>
-  <Route path="editar-perfil-docente" element={<EditarPerfilDocente/>}/>
-  <Route path="materiales-curso" element={<MaterialesCurso/>}/>
-  <Route path="formulario-materiales" element={<FormularioSubirArchivo/>}/>
-  <Route path="editar-materiales" element={<EditarMateriales/>}/>
-  <Route path="modulos-y-clases" element={<ModulosyClases/>}/>
-  <Route path="crear-modulo" element={<CrearModulo/>}/>
-  <Route path="crear-clase" element={<CrearClase/>}/>
-  <Route path="ver-clases" element={<VerClases/>}/>
-  <Route path="ver-detalles-clase" element={<VerDetallesClase/>}/>
-  <Route path="editar-clase" element={<EditarClase/>}/>
-  <Route path="evaluacion-curso" element={<EvaluacionesDelCurso/>}/>
-  <Route path="estudiantes" element={<Estudiantes/>}/>
-  <Route path="detalles-alumno-curso" element={<DetallesAlumnoCurso/>}/>
-  <Route path="ver-respuesta-evaluacion" element={<VerRespuestasEvaluacion/>}/>
-  <Route path="editar-curso" element={<EditarCurso/>}/>
-  
-</Route>
+        {/* Protegidas por RutaPrivada (rol: alumno) */}
+        <Route path="/perfil" element={<RutaPrivada rolPermitido="alumno"><Perfil /></RutaPrivada>} />
+        <Route path="/soporte" element={<RutaPrivada rolPermitido="alumno"><Soporte /></RutaPrivada>} />
+        <Route path="/cursos-actuales" element={<RutaPrivada rolPermitido="alumno"><CursosActual /></RutaPrivada>} />
+        <Route path="/clases-virtuales" element={<RutaPrivada rolPermitido="alumno"><ClasesVirtuales /></RutaPrivada>} />
+        <Route path="/horario" element={<RutaPrivada rolPermitido="alumno"><Horario /></RutaPrivada>} />
+        <Route path="/explorarclase" element={<RutaPrivada rolPermitido="alumno"><CursosDisponibles /></RutaPrivada>} />
+        <Route path="/inscribirse" element={<RutaPrivada rolPermitido="alumno"><Inscribirse /></RutaPrivada>} />
+        <Route path="/formulario-inscripcion" element={<RutaPrivada rolPermitido="alumno"><FormularioInscripcion /></RutaPrivada>} />
+        <Route path="/evaluaciones-cursos" element={<RutaPrivada rolPermitido="alumno"><EvaluacionesCursos /></RutaPrivada>} />
+        <Route path="/ver-examen" element={<RutaPrivada rolPermitido="alumno"><VerExamen /></RutaPrivada>} />
+        <Route path="/resultados" element={<RutaPrivada rolPermitido="alumno"><VerResultados /></RutaPrivada>} />
+        <Route path="/ver-detalles" element={<RutaPrivada rolPermitido="alumno"><VerDetalles /></RutaPrivada>} />
+        <Route path="/formulario-perfil" element={<RutaPrivada rolPermitido="alumno"><FormularioPerfil /></RutaPrivada>} />
+        <Route path="/reunion-llamada" element={<RutaPrivada rolPermitido="alumno"><ReunionLLamada /></RutaPrivada>} />
+        <Route path="/ver-modulos" element={<RutaPrivada rolPermitido="alumno"><VerModulos/></RutaPrivada>}/>
+        <Route path="/ver-clase" element={<RutaPrivada rolPermitido="alumno"><VerClase/></RutaPrivada>}/>
+        <Route path="/materiales" element={<RutaPrivada rolPermitido="alumno"><Materiales/></RutaPrivada>}/>
+        <Route path="/evaluacion-especifica" element={<RutaPrivada rolPermitido="alumno"><EvaluacionesEspecifica/></RutaPrivada>}/>
+        <Route path="/ver-envio" element={<RutaPrivada rolPermitido="alumno"><VerEnvio/></RutaPrivada>}/>
+        <Route path="/ver-calificacion" element={<RutaPrivada rolPermitido="alumno"><VerCalificacion/></RutaPrivada>}/>
+        <Route path="/detalles-clase" element={<RutaPrivada rolPermitido="alumno"><DetallesClase/></RutaPrivada>}/>
+        <Route path="/ver-mas" element={<RutaPrivada rolPermitido="alumno"><Vermas/></RutaPrivada>}/>
 
+
+
+
+      </Route>
+
+      {/* Layout docentes protegido por rol docente */}
+      <Route
+        path="/docente"
+        element={
+          <RutaPrivada rolPermitido="docente">
+            <DocentesLayout />
+          </RutaPrivada>
+        }
+      >
+        <Route path="inicio" element={<InicioDocente />} />
+        <Route path="mis-cursos" element={<MisCursos />} />
+        <Route path="crear-curso" element={<CrearCurso />} />
+        <Route path="admin-evaluaciones" element={<AdminEvaluaciones />} />
+        <Route path="crear-evaluacion" element={<CrearEvaluacion />} />
+        <Route path="ver-evaluacion" element={<VerEvaluacion />} />
+        <Route path="calificar-respuestas" element={<CalificarRespuestas />} />
+        <Route path="ver-respuestas" element={<VerRespuestas />} />
+        <Route path="editar-evaluacion" element={<EditarEvaluacion />} />
+        <Route path="seguimiento" element={<Seguimiento />} />
+        <Route path="ver-detalles-alumno" element={<VerDetallesAlumno />} />
+        <Route path="perfil-docente" element={<PerfilDocente />} />
+        <Route path="editar-perfil-docente" element={<EditarPerfilDocente />} />
+        <Route path="materiales-curso" element={<MaterialesCurso />} />
+        <Route path="formulario-materiales" element={<FormularioSubirArchivo />} />
+        <Route path="editar-materiales" element={<EditarMateriales />} />
+        <Route path="modulos-y-clases" element={<ModulosyClases />} />
+        <Route path="crear-modulo" element={<CrearModulo />} />
+        <Route path="crear-clase" element={<CrearClase />} />
+        <Route path="ver-clases" element={<VerClases />} />
+        <Route path="ver-detalles-clase" element={<VerDetallesClase />} />
+        <Route path="editar-clase" element={<EditarClase />} />
+        <Route path="evaluacion-curso" element={<EvaluacionesDelCurso />} />
+        <Route path="estudiantes" element={<Estudiantes />} />
+        <Route path="detalles-alumno-curso" element={<DetallesAlumnoCurso />} />
+        <Route path="ver-respuesta-evaluacion" element={<VerRespuestasEvaluacion />} />
+        <Route path="editar-curso" element={<EditarCurso />} />
+      </Route>
     </Routes>
   );
 }

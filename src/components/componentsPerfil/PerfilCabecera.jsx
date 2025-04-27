@@ -1,7 +1,11 @@
 import React from 'react';
 
 function PerfilCabecera({ data }) {
-    const { nombre, matricula, carrera, fotoUrl, estado, estadoVerificacion } = data;
+    if (!data) {
+        return null; 
+    }
+
+    const { nombre, matricula, carrera, fotoUrl, estado } = data;
 
     const FotoPlaceholder = () => (
         <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-300 rounded-full flex items-center justify-center text-gray-500">

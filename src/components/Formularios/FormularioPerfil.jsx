@@ -1,11 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function FormularioPerfil() {
-  const [enviado, setEnviado] = useState(false);
+  const navigate = useNavigate();
+  const [perfilData, setPerfilData] = useState({
+    nombre: "",
+    matricula: "",
+    fechaNacimiento: "",
+    email: "",
+    telefono: "",
+    direccion: "",
+  });
+
+  useEffect(() => {
+    const usuarioGuardado = JSON.parse(localStorage.getItem("usuario"));
+    if (usuarioGuardado && usuarioGuardado.perfil) {
+      const perfil = usuarioGuardado.perfil;
+      setPerfilData({
+        nombre: perfil.identificacion?.nombre || "",
+        matricula: perfil.identificacion?.matricula || "",
+        fechaNacimiento: perfil.personal?.["Fecha de Nacimiento"] || "",
+        email: perfil.contacto?.["Correo Personal"] || "",
+        telefono: perfil.contacto?.["Teléfonos"] || "",
+        direccion: perfil.contacto?.["Dirección"] || "",
+      });
+    }
+  }, []);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setPerfilData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEnviado(true);
+    const usuarioGuardado = JSON.parse(localStorage.getItem("usuario"));
+    if (usuarioGuardado && usuarioGuardado.perfil) {
+      usuarioGuardado.perfil.identificacion.nombre = perfilData.nombre;
+      usuarioGuardado.perfil.personal["Fecha de Nacimiento"] = perfilData.fechaNacimiento;
+      usuarioGuardado.perfil.contacto["Correo Personal"] = perfilData.email;
+      usuarioGuardado.perfil.contacto["Teléfonos"] = perfilData.telefono;
+      usuarioGuardado.perfil.contacto["Dirección"] = perfilData.direccion;
+      
+      localStorage.setItem("usuario", JSON.stringify(usuarioGuardado));
+      navigate("/perfil");
+    }
   };
 
   return (
@@ -18,14 +60,14 @@ function FormularioPerfil() {
 
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Foto de perfil */}
+            {/* Foto de perfil (opcional, sin lógica aún) */}
             <div className="bg-blancoPersonalizado p-6 rounded-lg shadow-md col-span-1 text-center">
               <p className="text-2xl font-semibold mb-6">Foto de Perfil</p>
               <div className="flex flex-col items-center space-y-4">
                 <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center text-gray-600">
                   📷
                 </div>
-                <input type="file" accept="image/*" className="text-sm" />
+                <input type="file" accept="image/*" className="text-sm" disabled />
                 <p className="text-sm text-gray-500">Próximamente: cambio de imagen</p>
               </div>
             </div>
@@ -37,19 +79,19 @@ function FormularioPerfil() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="nombre" className="block font-bold mb-1">Nombre completo</label>
-                  <input id="nombre" type="text" required placeholder="Nombre completo"
+                  <input id="nombre" type="text" value={perfilData.nombre} onChange={handleChange}
                     className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
                 </div>
 
                 <div>
                   <label htmlFor="matricula" className="block font-bold mb-1">Matrícula</label>
-                  <input id="matricula" type="text" readOnly required placeholder="Matrícula"
-                    className="bg-gray-100 cursor-not-allowed w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
+                  <input id="matricula" type="text" value={perfilData.matricula} readOnly
+                    className="bg-gray-100 cursor-not-allowed w-full border rounded py-2 px-3 shadow" />
                 </div>
 
                 <div>
-                  <label htmlFor="fecha-nacimiento" className="block font-bold mb-1">Fecha de nacimiento</label>
-                  <input id="fecha-nacimiento" type="date" required
+                  <label htmlFor="fechaNacimiento" className="block font-bold mb-1">Fecha de nacimiento</label>
+                  <input id="fechaNacimiento" type="date" value={perfilData.fechaNacimiento} onChange={handleChange}
                     className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
                 </div>
               </div>
@@ -63,42 +105,19 @@ function FormularioPerfil() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="email" className="block font-bold mb-1">Correo electrónico</label>
-                <input id="email" type="email" required placeholder="Correo electrónico"
+                <input id="email" type="email" value={perfilData.email} onChange={handleChange}
                   className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
               </div>
 
               <div>
                 <label htmlFor="telefono" className="block font-bold mb-1">Teléfono</label>
-                <input id="telefono" type="text" required placeholder="Teléfono"
+                <input id="telefono" type="text" value={perfilData.telefono} onChange={handleChange}
                   className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
               </div>
 
               <div className="md:col-span-2">
                 <label htmlFor="direccion" className="block font-bold mb-1">Dirección</label>
-                <input id="direccion" type="text" required placeholder="Dirección"
-                  className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
-              </div>
-            </div>
-          </div>
-
-          {/* Cambiar contraseña */}
-          <div className="bg-blancoPersonalizado p-6 rounded-lg shadow-md">
-            <p className="text-2xl font-semibold mb-6">Cambiar contraseña</p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label htmlFor="password" className="block font-bold mb-1">Contraseña actual</label>
-                <input id="password" type="password" required placeholder="Actual"
-                  className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
-              </div>
-              <div>
-                <label htmlFor="nueva-password" className="block font-bold mb-1">Nueva contraseña</label>
-                <input id="nueva-password" type="password" required placeholder="Nueva"
-                  className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
-              </div>
-              <div>
-                <label htmlFor="confirmar-password" className="block font-bold mb-1">Confirmar nueva</label>
-                <input id="confirmar-password" type="password" required placeholder="Confirmar"
+                <input id="direccion" type="text" value={perfilData.direccion} onChange={handleChange}
                   className="w-full border rounded py-2 px-3 shadow focus:ring-2 focus:ring-cafe3Personalizado" />
               </div>
             </div>
@@ -106,7 +125,7 @@ function FormularioPerfil() {
 
           {/* Botones */}
           <div className="text-center">
-            <button type="button"
+            <button type="button" onClick={() => navigate("/perfil")}
               className="bg-gray-400 text-white font-bold py-2 px-6 rounded-lg hover:bg-gray-500 active:scale-95 shadow-md transition duration-300 ease-in-out">
               Cancelar
             </button>
@@ -116,12 +135,6 @@ function FormularioPerfil() {
             </button>
           </div>
         </form>
-
-        {enviado && (
-          <p className="text-green-700 font-medium text-center mt-6">
-             Tu información se ha actualizado correctamente.
-          </p>
-        )}
       </div>
     </div>
   );

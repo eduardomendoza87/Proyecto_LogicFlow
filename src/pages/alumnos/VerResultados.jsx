@@ -1,120 +1,137 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 
-function VerResultados(){
-    const [ResTref, ResTInView] = useInView({ triggerOnce: true, threshold: 0.2 });
-    const [Res1Ref, Res1InView] = useInView({ triggerOnce: true, threshold: 0.2 });
-    const [Res2Ref, Res2InView] = useInView({ triggerOnce: true, threshold: 0.2 });
+// Datos simulados de resultados
+const resultadosSimulados = [
+  {
+    curso: "Cálculo I",
+    tipoExamen: "Parcial",
+    fecha: "2024-04-20",
+    calificacion: 85,
+    estado: "Aprobado",
+  },
+  {
+    curso: "Historia",
+    tipoExamen: "Final",
+    fecha: "2024-04-15",
+    calificacion: 60,
+    estado: "Reprobado",
+  },
+  {
+    curso: "Física",
+    tipoExamen: "Parcial",
+    fecha: "2024-04-25",
+    calificacion: null,
+    estado: "Pendiente",
+  },
+];
 
-    return (
-        <div className="bg-cafe4Personalizado container mx-auto p-6">
-          {/* Sección principal */}
-          <h3
-            ref={ResTref}
-            className={`text-3xl font-bold text-center mb-28 text-negroPersonalizado transition-opacity duration-1000 ${
-              ResTInView ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            Resultados de tus evaluaciones
-          </h3>
-          {/* Barra de búsqueda y filtrado */}
-          <div className="flex flex-col md:flex-row gap-10 mb-16">
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-negroPersonalizado leading-tight  focus:outline-none focus:ring-2 focus:ring-cafe1Personalizado "
-              id="text"
-              type="text"
-              placeholder="Buscar"
-            />
-    
-            {/* Filtros */}
-            <select className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-cafe3Personalizado"
-            >
-              <option value="">Tipo de examen</option>
-              <option value="">Diagnostico</option>
-              <option value="">Parcial</option>
-              <option value="">Final</option>
-              </select>
-    
-            <select className="border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-cafe3Personalizado"
-            >
-              <option value="">Estado </option>
-              <option value="">Realizado</option>
-              <option value="">Pendiente</option>
-              <option value="">Calificado</option>
-            </select>
-    
-    
-            
-          </div>
-          {/*Card de Resultados*/}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 place-items-center">
-    
-            {/*Card 1 Resultados*/}
+function VerResultados() {
+  const [filtroTipo, setFiltroTipo] = useState("");
+  const [filtroEstado, setFiltroEstado] = useState("");
+  const [textoBusqueda, setTextoBusqueda] = useState("");
+
+  const [ResTref, ResTInView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  const filtrarResultados = () => {
+    return resultadosSimulados.filter((resultado) => {
+      const coincideBusqueda = resultado.curso.toLowerCase().includes(textoBusqueda.toLowerCase());
+      const coincideTipo = filtroTipo ? resultado.tipoExamen === filtroTipo : true;
+      const coincideEstado = filtroEstado ? resultado.estado === filtroEstado : true;
+      return coincideBusqueda && coincideTipo && coincideEstado;
+    });
+  };
+
+  const resultadosFiltrados = filtrarResultados();
+
+  return (
+    <div className="bg-cafe4Personalizado container mx-auto p-6 min-h-screen">
+      {/* Título */}
+      <h3
+        ref={ResTref}
+        className={`text-3xl font-bold text-center mb-28 text-negroPersonalizado transition-opacity duration-1000 ${
+          ResTInView ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        Resultados de tus evaluaciones
+      </h3>
+
+      {/* Barra de búsqueda y filtros */}
+      <div className="flex flex-col md:flex-row gap-6 mb-16">
+        <input
+          type="text"
+          placeholder="Buscar curso..."
+          className="shadow border rounded py-2 px-3 w-full md:flex-1 text-negroPersonalizado focus:ring-2 focus:ring-cafe1Personalizado"
+          value={textoBusqueda}
+          onChange={(e) => setTextoBusqueda(e.target.value)}
+        />
+        <select
+          className="border rounded p-2 w-full md:w-1/4"
+          value={filtroTipo}
+          onChange={(e) => setFiltroTipo(e.target.value)}
+        >
+          <option value="">Tipo de examen</option>
+          <option value="Diagnostico">Diagnóstico</option>
+          <option value="Parcial">Parcial</option>
+          <option value="Final">Final</option>
+        </select>
+        <select
+          className="border rounded p-2 w-full md:w-1/4"
+          value={filtroEstado}
+          onChange={(e) => setFiltroEstado(e.target.value)}
+        >
+          <option value="">Estado</option>
+          <option value="Aprobado">Aprobado</option>
+          <option value="Reprobado">Reprobado</option>
+          <option value="Pendiente">Pendiente</option>
+        </select>
+      </div>
+
+      {/* Tarjetas de Resultados */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
+        {resultadosFiltrados.length > 0 ? (
+          resultadosFiltrados.map((resultado, index) => (
             <div
-            ref={Res1Ref}
-            className={`bg-blancoPersonalizado p-6 text-center w-full max-w-md rounded-lg shadow-lg transition-opacity duration-1000 ${
-              Res1InView ? "opacity-100" : "opacity-0"
-            }`}
+              key={index}
+              className="bg-blancoPersonalizado p-6 text-left w-full max-w-md rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
             >
-              <div >
-              <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
-                <p className="text-negroPersonalizado text-left text-lg">
-                Tipo de examen:
-                </p>
-                <p className="text-negroPersonalizado text-left text-lg">
-                  Fecha:
-                </p>
-                <p className="text-negroPersonalizado text-left text-lg">
-                  Calificacion:
-                </p>
-                <p className="text-negroPersonalizado text-left text-lg">
-                  Estado:
-                </p>
-                <div className="flex flex-col md:flex-row items-center justify-center mt-4 space-y-2 md:space-y-0 md:space-x-4 w-full">
-                  <Link to="/ver-detalles">
-                  <button className="bg-cafe3Personalizado text-negroPersonalizado font-bold px-4 py-2 rounded-lg hover:bg-opacity-80 shadow-md w-full md:w-auto">
+              <h4 className="text-xl font-bold mb-4 text-negroPersonalizado">{resultado.curso}</h4>
+              <p className="text-negroPersonalizado"><strong>Tipo de examen:</strong> {resultado.tipoExamen}</p>
+              <p className="text-negroPersonalizado"><strong>Fecha:</strong> {resultado.fecha}</p>
+              <p className="text-negroPersonalizado">
+                <strong>Calificación:</strong>{" "}
+                {resultado.calificacion !== null ? `${resultado.calificacion}` : "No disponible"}
+              </p>
+              <p className="text-negroPersonalizado">
+                <strong>Estado:</strong>{" "}
+                <span
+                  className={`font-semibold ${
+                    resultado.estado === "Aprobado"
+                      ? "text-green-600"
+                      : resultado.estado === "Reprobado"
+                      ? "text-red-600"
+                      : "text-yellow-600"
+                  }`}
+                >
+                  {resultado.estado}
+                </span>
+              </p>
+              <div className="flex justify-center mt-6">
+                <Link to="/ver-detalles">
+                  <button className="bg-cafe3Personalizado text-negroPersonalizado font-bold px-6 py-2 rounded-lg hover:bg-opacity-80 shadow-md">
                     Ver detalles
                   </button>
-                  </Link>
-                </div>
+                </Link>
               </div>
             </div>
-    
-            
-             {/*Card 2 Resultados*/}
-             <div
-            ref={Res2Ref}
-            className={`bg-blancoPersonalizado p-6 text-center w-full max-w-md rounded-lg shadow-lg transition-opacity duration-1000 ${
-              Res2InView ? "opacity-100" : "opacity-0"
-            }`}
-            >
-              <div >
-              <h4 className="text-xl font-semibold mb-2 text-negroPersonalizado">Curso:</h4>
-                <p className="text-negroPersonalizado text-left text-lg">
-                Tipo de examen:
-                </p>
-                <p className="text-negroPersonalizado text-left text-lg">
-                  Fecha:
-                </p>
-                <p className="text-negroPersonalizado text-left text-lg">
-                  Calificacion:
-                </p>
-                <p className="text-negroPersonalizado text-left text-lg">
-                  Estado:
-                </p>
-                <div className="flex flex-col md:flex-row items-center justify-center mt-4 space-y-2 md:space-y-0 md:space-x-4 w-full">
-                  <Link to="/ver-detalles">
-                  <button className="bg-cafe3Personalizado text-negroPersonalizado font-bold px-4 py-2 rounded-lg hover:bg-opacity-80 shadow-md w-full md:w-auto">
-                    Ver detalles
-                  </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            </div>
-            </div>
-            );
+          ))
+        ) : (
+          <p className="text-center text-negroPersonalizado text-lg">No se encontraron resultados.</p>
+        )}
+      </div>
+    </div>
+  );
 }
-export default VerResultados
+
+export default VerResultados;

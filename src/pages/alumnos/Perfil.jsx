@@ -1,56 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PerfilCabecera from "../../components/componentsPerfil/PerfilCabecera";
 import PerfilContenido from "../../components/componentsPerfil/PerfilContenido";
 import PerfilAcciones from "../../components/componentsPerfil/PerfilAcciones";
 
+function Perfil() {
+  const [perfilData, setPerfilData] = useState(null);
+  const navigate = useNavigate();
 
-const perfilDataEjemplo = {
-    identificacion:{
-        nombre: "Juan Izquierdo Lopez",
-        matricula: "20231234",
-        carrera: "Ingeniería en Sistemas Computacionales",
-        fotoUrl: null,
-        estado: "Vigente",
-        estadoVerifiacion: "verificado",  
-    },
-    academicoActual:{
-        'Plan de Estudios': "(2023) Ingeniería en Sistemas Computacionales",
-        'Modalidad': "(P) PRESENCIAL",
-        'Periodo Actual o Último': "2023-2",
-    },
-    contacto: {
-    'Correo Personal': "eduardomendoza7473@gmail.com",
-    'Teléfonos': "(123) 456-7890",
-    'Dirección': "Calle 5 de Febrero, Col. Centro, Villahermosa, Tabasco",
-    },
-    personal: {
-    'Fecha de Nacimiento': "2000-05-09",
-    'CURP': "IZOL040509HDFZLNA0",
-    },
-    historialAcademico: {
-    'Escuela de Procedencia': "COBAEV",
-    'Periodo de Ingreso': "2023-1",
-    'Periodos Validados': "2023-1, 2023-2",
-}
-};
+  useEffect(() => {
+    const usuarioGuardado = JSON.parse(localStorage.getItem("usuario"));
 
-function Perfil(){
-    const perfilData = perfilDataEjemplo; 
-    
-    if (!perfilData) {
-        return <div>Cargando perfil...</div>;
+    if (usuarioGuardado && usuarioGuardado.perfil) {
+      setPerfilData(usuarioGuardado.perfil);
+    } else {
+      navigate("/iniciar-sesion");
     }
+  }, [navigate]);
 
-    return (
-        <div className="container mx-auto p-4 md:p-8 bg-gary-50 min-h-screen" >
-            <PerfilCabecera data={perfilData.identificacion} />
-            <PerfilContenido data={perfilData} />
-            <PerfilAcciones  />
-        </div>
-    );
+  if (!perfilData) {
+    return <div className="text-center p-10 text-lg font-bold text-gray-700">Cargando perfil...</div>;
+  }
+
+  return (
+    <div className="container mx-auto p-4 md:p-8 bg-gary-50 min-h-screen">
+      <PerfilCabecera data={perfilData.identificacion} />
+      <PerfilContenido data={perfilData} />
+      <PerfilAcciones />
+    </div>
+  );
 }
-
-
-
 
 export default Perfil;
