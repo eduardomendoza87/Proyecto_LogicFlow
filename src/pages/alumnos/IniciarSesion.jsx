@@ -24,6 +24,11 @@ function IniciarSesion() {
       localStorage.setItem("usuario", JSON.stringify({ email, rol: "docente" }));
       toast.success("Bienvenido docente, redirigiendo...");
       setTimeout(() => navigate("/docente/inicio"), 2000);
+    } else if (email === "admin@ucla.edu" && password === "54321") {
+      localStorage.setItem("usuarioRol", "admin");
+      localStorage.setItem("usuario", JSON.stringify({ email, rol: "admin" }));
+      toast.success("Bienvenido administrador, redirigiendo...");
+      setTimeout(() => navigate("/admin/inicio"), 2000);
     } else {
       toast.error("Credenciales inválidas");
     }

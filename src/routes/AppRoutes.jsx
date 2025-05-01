@@ -64,6 +64,10 @@ import DetallesAlumnoCurso from "../components/ComponenteDocente/DetallesAlumnoC
 import VerRespuestasEvaluacion from "../components/ComponenteDocente/VerRespuestasEvaluacion";
 import EditarCurso from "../components/ComponenteDocente/EditarCurso";
 import Vermas from "../components/componentesAlumnos/Vermas";
+import AdminLayout from "../layouts/AdminLayout";
+
+//Paginas de admin
+import InicioAdmin from "../pages/administrador/InicioAdmin";
 
 function AppRoutes() {
   return (
@@ -140,6 +144,19 @@ function AppRoutes() {
         <Route path="detalles-alumno-curso" element={<DetallesAlumnoCurso />} />
         <Route path="ver-respuesta-evaluacion" element={<VerRespuestasEvaluacion />} />
         <Route path="editar-curso" element={<EditarCurso />} />
+      </Route>
+
+      {/*Layout de admin protegido*/}
+      <Route
+      path="/admin"
+      element={
+        <RutaPrivada rolPermitido="admin">
+          <AdminLayout/>
+        </RutaPrivada>
+      }
+      >
+        <Route path="inicio" element={<InicioAdmin/>}/>
+
       </Route>
     </Routes>
   );
