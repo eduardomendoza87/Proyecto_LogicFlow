@@ -34,7 +34,7 @@ function NavbarAdmin() {
 
         <ul className={`md:flex md:items-center space-y-4 md:space-y-0 md:space-x-6 ${menuOpen ? "block mt-6" : "hidden md:flex"}`}>
           <li><Link to="/" className="hover:text-black">Inicio</Link></li>
-          <li><Link to="/acerca-de-nosotros" className="hover:text-black">Gestion de usuarios</Link></li>
+          <li><Link to="gestion-usuarios" className="hover:text-black">Gestion de usuarios</Link></li>
 
           {usuarioAutenticado && (
             <>

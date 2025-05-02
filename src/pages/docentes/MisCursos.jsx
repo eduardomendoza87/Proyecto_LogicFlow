@@ -46,11 +46,6 @@ function MisCursos() {
           <option>Activo</option>
           <option>Finalizado</option>
         </select>
-        <Link to="/docente/crear-curso" className="w-full md:w-auto">
-          <button className="bg-cafe3Personalizado text-negroPersonalizado font-bold px-4 py-2 rounded-lg hover:bg-opacity-80 shadow-md w-full md:w-auto">
-            Crear curso
-          </button>
-        </Link>
       </div>
 
       {/* Lista de cursos */}
@@ -88,15 +83,6 @@ function MisCursos() {
             <Link to="/docente/estudiantes">
               <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">Estudiantes</button>
             </Link>
-            <Link to="/docente/editar-curso">
-              <button className="bg-cafe3Personalizado px-4 py-2 rounded-lg shadow hover:bg-opacity-80">Editar curso</button>
-            </Link>
-            <button
-              onClick={() => setShowModal(true)}
-              className="bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600"
-            >
-              Eliminar curso
-            </button>
           </div>
         </div>
       </div>

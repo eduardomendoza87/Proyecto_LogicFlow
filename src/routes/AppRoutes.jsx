@@ -68,6 +68,10 @@ import AdminLayout from "../layouts/AdminLayout";
 
 //Paginas de admin
 import InicioAdmin from "../pages/administrador/InicioAdmin";
+import GestionUsuarios from "../pages/administrador/GestionUsuarios";
+import AgregarUsuario from "../components/componenteAdmin/AgregarUsuario";
+import EditarUsuario from "../components/componenteAdmin/EditarUsuario";
+import VerDetallesUsuarios from "../components/componenteAdmin/VerDetallesUsuario";
 
 function AppRoutes() {
   return (
@@ -156,6 +160,10 @@ function AppRoutes() {
       }
       >
         <Route path="inicio" element={<InicioAdmin/>}/>
+        <Route path="gestion-usuarios" element={<GestionUsuarios/>}/>
+        <Route path="agregar-usuario" element={<AgregarUsuario/>}/>
+        <Route path="editar-usuario" element={<EditarUsuario/>}/>
+        <Route path="ver-detalles-usuarios" element={<VerDetallesUsuarios/>}/>
 
       </Route>
     </Routes>
