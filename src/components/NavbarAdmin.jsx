@@ -35,12 +35,11 @@ function NavbarAdmin() {
         <ul className={`md:flex md:items-center space-y-4 md:space-y-0 md:space-x-6 ${menuOpen ? "block mt-6" : "hidden md:flex"}`}>
           <li><Link to="/" className="hover:text-black">Inicio</Link></li>
           <li><Link to="gestion-usuarios" className="hover:text-black">Gestion de usuarios</Link></li>
+          <li><Link to="gestion-cursos" className="hover:text-black">Gestion de cursos</Link></li>
 
           {usuarioAutenticado && (
             <>
-              <li className="relative">
-                <button onClick={() => toggleSubmenu("cursos")} className="hover:text-black">Gestion de cursos</button>
-              </li>
+          
 
               <li className="relative">
                 <button onClick={() => toggleSubmenu("evalauciones")} className="hover:text-black">Gestion de evaluaciones</button>

@@ -37,8 +37,7 @@ import DetallesClase from "../components/componentesAlumnos/DetallesClase";
 
 // Páginas docentes
 import InicioDocente from "../pages/docentes/InicioDocente";
-import MisCursos from "../pages/docentes/MisCursos";  
-import CrearCurso from "../pages/docentes/CrearCurso"; 
+import MisCursos from "../pages/docentes/MisCursos";   
 import AdminEvaluaciones from "../pages/docentes/AdminEvaluaciones"; 
 import CrearEvaluacion from "../components/ComponenteDocente/CrearEvaluacion"; 
 import VerEvaluacion from "../components/ComponenteDocente/VerEvaluacion";
@@ -62,16 +61,21 @@ import EvaluacionesDelCurso from "../components/ComponenteDocente/EvaluacionesDe
 import Estudiantes from "../components/ComponenteDocente/Estudiantes";
 import DetallesAlumnoCurso from "../components/ComponenteDocente/DetallesAlumnoCurso";
 import VerRespuestasEvaluacion from "../components/ComponenteDocente/VerRespuestasEvaluacion";
-import EditarCurso from "../components/ComponenteDocente/EditarCurso";
 import Vermas from "../components/componentesAlumnos/Vermas";
-import AdminLayout from "../layouts/AdminLayout";
+
 
 //Paginas de admin
+import AdminLayout from "../layouts/AdminLayout";
 import InicioAdmin from "../pages/administrador/InicioAdmin";
 import GestionUsuarios from "../pages/administrador/GestionUsuarios";
 import AgregarUsuario from "../components/componenteAdmin/AgregarUsuario";
 import EditarUsuario from "../components/componenteAdmin/EditarUsuario";
 import VerDetallesUsuarios from "../components/componenteAdmin/VerDetallesUsuario";
+import GestionCursos from "../pages/administrador/GestionCursos";
+import CrearCurso from "../components/componenteAdmin/CrearCurso";
+import EditarCurso from "../components/componenteAdmin/EditarCurso";
+import VerDetallesCursos from "../components/componenteAdmin/VerDetallesCursos";
+
 
 function AppRoutes() {
   return (
@@ -123,7 +127,6 @@ function AppRoutes() {
       >
         <Route path="inicio" element={<InicioDocente />} />
         <Route path="mis-cursos" element={<MisCursos />} />
-        <Route path="crear-curso" element={<CrearCurso />} />
         <Route path="admin-evaluaciones" element={<AdminEvaluaciones />} />
         <Route path="crear-evaluacion" element={<CrearEvaluacion />} />
         <Route path="ver-evaluacion" element={<VerEvaluacion />} />
@@ -147,7 +150,7 @@ function AppRoutes() {
         <Route path="estudiantes" element={<Estudiantes />} />
         <Route path="detalles-alumno-curso" element={<DetallesAlumnoCurso />} />
         <Route path="ver-respuesta-evaluacion" element={<VerRespuestasEvaluacion />} />
-        <Route path="editar-curso" element={<EditarCurso />} />
+        
       </Route>
 
       {/*Layout de admin protegido*/}
@@ -164,6 +167,10 @@ function AppRoutes() {
         <Route path="agregar-usuario" element={<AgregarUsuario/>}/>
         <Route path="editar-usuario" element={<EditarUsuario/>}/>
         <Route path="ver-detalles-usuarios" element={<VerDetallesUsuarios/>}/>
+        <Route path="gestion-cursos" element={<GestionCursos/>}/>
+        <Route path="crear-curso" element={<CrearCurso />} />
+        <Route path="editar-curso" element={<EditarCurso />} />
+        <Route path="ver-detalles-cursos" element={<VerDetallesCursos/>}/>
 
       </Route>
     </Routes>
