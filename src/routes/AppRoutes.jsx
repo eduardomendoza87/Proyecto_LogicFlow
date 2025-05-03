@@ -77,6 +77,8 @@ import EditarCurso from "../components/componenteAdmin/EditarCurso";
 import VerDetallesCursos from "../components/componenteAdmin/VerDetallesCursos";
 import MonitoreoEvaluaciones from "../pages/administrador/MonitoreoEvaluaciones";
 import VerDetallesEvaluacion from "../components/componenteAdmin/VerDetallesEvaluacion";
+import SolicitudesInscripcion from "../pages/administrador/SolicitudesInscripcion";
+import VerDetallesSolicitud from "../components/componenteAdmin/VerDetallesSolicitud";
 
 
 function AppRoutes() {
@@ -175,6 +177,8 @@ function AppRoutes() {
         <Route path="ver-detalles-cursos" element={<VerDetallesCursos/>}/>
         <Route path="monitoreo-evaluaciones" element={<MonitoreoEvaluaciones/>}/>
         <Route path="ver-detalles-evaluacion" element={<VerDetallesEvaluacion/>}/>
+        <Route path="solicitudes-inscripcion" element={<SolicitudesInscripcion/>}/>
+        <Route path="ver-detalles-solicitud" element={<VerDetallesSolicitud/>}/>
 
       </Route>
     </Routes>
