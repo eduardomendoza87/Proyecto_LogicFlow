@@ -33,26 +33,13 @@ function NavbarAdmin() {
         </div>
 
         <ul className={`md:flex md:items-center space-y-4 md:space-y-0 md:space-x-6 ${menuOpen ? "block mt-6" : "hidden md:flex"}`}>
-          <li><Link to="/" className="hover:text-black">Inicio</Link></li>
+          <li><Link to="/admin/inicio" className="hover:text-black">Inicio</Link></li>
           <li><Link to="gestion-usuarios" className="hover:text-black">Gestion de usuarios</Link></li>
           <li><Link to="gestion-cursos" className="hover:text-black">Gestion de cursos</Link></li>
-
-          {usuarioAutenticado && (
-            <>
+          <li><Link to="monitoreo-evaluaciones" className="hover:text-black">Monitoreo evaluaciones</Link></li>
+          <li><Link to="solicitudes-inscripcion" className="hover:text-black">Solicitudes de inscripcion</Link></li>
+          <li><Link to="Reporte-y-estadisticas" className="hover:text-black">Reporte y estadisticas</Link></li>
           
-
-              <li className="relative">
-                <button onClick={() => toggleSubmenu("evalauciones")} className="hover:text-black">Gestion de evaluaciones</button>
-              </li>
-
-              <li className="relative">
-                <button onClick={() => toggleSubmenu("solicitudes")} className="hover:text-black">Solicitudes de isncripcion</button>
-              </li>
-
-              <li><Link to="/perfil" className="hover:text-black">Reporte y estadisticas</Link></li>
-            </>
-          )}
-
           {!usuarioAutenticado ? (
             <>
               <li><Link to="/iniciar-sesion" className="bg-cafe3Personalizado hover:bg-gray-200 text-blancoPersonalizado py-2 px-4 rounded">Iniciar sesión</Link></li>

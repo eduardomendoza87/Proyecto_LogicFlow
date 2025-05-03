@@ -75,6 +75,8 @@ import GestionCursos from "../pages/administrador/GestionCursos";
 import CrearCurso from "../components/componenteAdmin/CrearCurso";
 import EditarCurso from "../components/componenteAdmin/EditarCurso";
 import VerDetallesCursos from "../components/componenteAdmin/VerDetallesCursos";
+import MonitoreoEvaluaciones from "../pages/administrador/MonitoreoEvaluaciones";
+import VerDetallesEvaluacion from "../components/componenteAdmin/VerDetallesEvaluacion";
 
 
 function AppRoutes() {
@@ -171,6 +173,8 @@ function AppRoutes() {
         <Route path="crear-curso" element={<CrearCurso />} />
         <Route path="editar-curso" element={<EditarCurso />} />
         <Route path="ver-detalles-cursos" element={<VerDetallesCursos/>}/>
+        <Route path="monitoreo-evaluaciones" element={<MonitoreoEvaluaciones/>}/>
+        <Route path="ver-detalles-evaluacion" element={<VerDetallesEvaluacion/>}/>
 
       </Route>
     </Routes>
