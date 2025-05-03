@@ -38,7 +38,7 @@ function NavbarAdmin() {
           <li><Link to="gestion-cursos" className="hover:text-black">Gestion de cursos</Link></li>
           <li><Link to="monitoreo-evaluaciones" className="hover:text-black">Monitoreo evaluaciones</Link></li>
           <li><Link to="solicitudes-inscripcion" className="hover:text-black">Solicitudes de inscripcion</Link></li>
-          <li><Link to="Reporte-y-estadisticas" className="hover:text-black">Reporte y estadisticas</Link></li>
+          <li><Link to="reportes-estadisticas" className="hover:text-black">Reporte y estadisticas</Link></li>
           
           {!usuarioAutenticado ? (
             <>

@@ -79,6 +79,9 @@ import MonitoreoEvaluaciones from "../pages/administrador/MonitoreoEvaluaciones"
 import VerDetallesEvaluacion from "../components/componenteAdmin/VerDetallesEvaluacion";
 import SolicitudesInscripcion from "../pages/administrador/SolicitudesInscripcion";
 import VerDetallesSolicitud from "../components/componenteAdmin/VerDetallesSolicitud";
+import ReporteyEstadisticas from "../pages/administrador/ReporteyEstadisticas.jsx";
+import DetallesCursoAdmin from "../components/componenteAdmin/DetallesCursoAdmin.jsx";
+import DetallesEvaluacionAdmin from "../components/componenteAdmin/DetallesEvaluacionAdmin.jsx";
 
 
 function AppRoutes() {
@@ -179,6 +182,9 @@ function AppRoutes() {
         <Route path="ver-detalles-evaluacion" element={<VerDetallesEvaluacion/>}/>
         <Route path="solicitudes-inscripcion" element={<SolicitudesInscripcion/>}/>
         <Route path="ver-detalles-solicitud" element={<VerDetallesSolicitud/>}/>
+        <Route path="reportes-estadisticas" element={<ReporteyEstadisticas/>}/>
+        <Route path="detalles-evaluacion-admin" element={<DetallesEvaluacionAdmin/>}/>
+        <Route path="detalles-cursos-admin" element={<DetallesCursoAdmin/>}/>
 
       </Route>
     </Routes>
