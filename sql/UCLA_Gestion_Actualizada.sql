@@ -4,11 +4,19 @@ DROP DATABASE IF EXISTS UCLA_Gestion;
 CREATE DATABASE UCLA_Gestion;
 USE UCLA_Gestion;
 
+-- Tabla de roles
+CREATE TABLE Roles (
+    rol_id INT IDENTITY(1,1) PRIMARY KEY,
+    nombre_rol NVARCHAR(50) NOT NULL UNIQUE
+);
+
 -- Tabla de usuarios
 CREATE TABLE Usuarios (
     usuario_id INT IDENTITY(1,1) PRIMARY KEY,
     usuario_correo NVARCHAR(100) UNIQUE NOT NULL,
-    usuario_clave NVARCHAR(255) NOT NULL
+    usuario_clave NVARCHAR(255) NOT NULL,
+    rol_id INT NOT NULL,
+    FOREIGN KEY (rol_id) REFERENCES Roles(rol_id)
 );
 
 -- Tabla de datos personales
@@ -61,13 +69,15 @@ CREATE TABLE Cursos (
     curso_modalidad NVARCHAR(50),
     curso_area NVARCHAR(100),
     curso_tipo NVARCHAR(50),
-    curso_profesor_id INT NOT NULL,
+    curso_profesor_id INT NULL,
     curso_estado NVARCHAR(50),
     curso_horario NVARCHAR(100),
     curso_fecha_inicio DATE,
     curso_fecha_fin DATE,
     curso_max_alumnos INT,
-    FOREIGN KEY (curso_profesor_id) REFERENCES Profesores(profesor_id)
+    curso_creado_por INT NOT NULL,
+    FOREIGN KEY (curso_profesor_id) REFERENCES Profesores(profesor_id),
+    FOREIGN KEY (curso_creado_por) REFERENCES Usuarios(usuario_id)
 );
 
 -- Tabla de materiales del curso
@@ -122,6 +132,7 @@ CREATE TABLE Evaluaciones (
     preguntas NVARCHAR(MAX),
     material_adicional NVARCHAR(255),
     url NVARCHAR(255),
+    revisado_por_admin BIT DEFAULT 0,
     FOREIGN KEY (curso_id) REFERENCES Cursos(curso_id)
 );
 
@@ -145,6 +156,7 @@ CREATE TABLE Inscripciones (
     estudiante_id INT NOT NULL,
     curso_id INT NOT NULL,
     fecha_inscripcion DATE DEFAULT GETDATE(),
+    estado_solicitud NVARCHAR(50) DEFAULT 'Pendiente',
     FOREIGN KEY (estudiante_id) REFERENCES Estudiantes(estudiante_id),
     FOREIGN KEY (curso_id) REFERENCES Cursos(curso_id)
 );
